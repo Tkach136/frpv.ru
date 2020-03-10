@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Заявка</title>
+</head>
+<body>
+
+<form method="post" action="{% url 'frpv:send' %}">
+    {% csrf_token %}
+<table>
+    <thead>Заявка</thead>
+    {% for label in labels %}
+    <tr>
+        <td>{{ label }}</td><td><input type="text" name="{{ label }}"></td>
+    </tr>
+    {% endfor %}
+
+</table>
+    <input type="submit" value="Оставить заявку" />
+</form>
+
+</body>
+</html>
