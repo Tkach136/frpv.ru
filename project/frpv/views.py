@@ -3,7 +3,7 @@ from django.http import Http404, HttpResponse, response
 from django.views import generic
 from . models import Bid
 from django_db_logging import logging
-from time import timezone
+from django.utils import timezone
 
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
