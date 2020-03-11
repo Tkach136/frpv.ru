@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import Http404, HttpResponse, response
 from django.views import generic
 from . models import Bid
+from django.core.mail import EmailMessage, send_mail
+from django.core import mail
 from django_db_logging import logging
 from django.utils import timezone
-
+import json
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
           'price_project', 'implementation_period', 'sum_of_self_investmens',
@@ -46,5 +48,13 @@ def send(request):
             logging('%s была создана Заявка № %d компании %s , ИНН %d на сумму %d'
                     % (timezone.now(), bid.id, bid.name, bid.INN, bid.loan_amount)
             )
-        return HttpResponse("Пук, моделька отправляется почтой")
-    # TODO моделька отправляется почтой
+        # json_object = json.loads(bid.__dict__)
+        with mail.get_connection() as connection:
+            mail.EmailMessage(
+                'Заявка',
+                'message',
+                'from',
+                ['ezenkin@it-russ.com'],
+                connection=connection,
+            ).send()
+        return HttpResponse("Заявка создана.")
