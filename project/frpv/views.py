@@ -11,7 +11,7 @@ import json
 from pprint import pformat
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
-          'price_project', 'implementation_period', 'sum_of_self_investmens',
+          'price_project', 'implementation_period', 'sum_of_self_investments',
           'loan_amount', 'term_use_of_the_loan', 'proposed_collateral',
           )
 
@@ -46,7 +46,7 @@ ROWS = {
 }
 
 msg = """
-Заявка успешно создана! 
+Заявка %s успешно создана! 
 Наши менеджеры свяжутся с Вами в самое ближайшее время. 
 С уважением, Региональный фонд развития промышленности Воронежской области.
 """
@@ -77,38 +77,40 @@ def application(request):
 
 def send(request):
     if request.method != 'POST':
-        return HttpResponse('Вы ввели некорректные данные. Пожалуйста, попробуйте ещё раз.')
+        return HttpResponse('Заполните недостающие поля.')
     elif request.method == 'POST':
-        data = request.headers.items()
+        data = request.POST
         bid = Bid(
-            name=data['name'],
-            OGRN=data['OGRN'],
-            INN=data['INN'],
-            chief=data['chief'],
-            email=data['email'],
-            target=data['target'],
-            price_project=data['price_project'],
-            implementation_period=data['implementation_period'],
-            sum_of_self_investmens=data['sum_of_self_investments'],
-            loan_amount=data['loan_amount'],
-            term_use_of_the_loan=data['term_use_of_the_loan'],
-            proposed_collateral=data['proposed_collateral']
+            name=data.get('name'),
+            OGRN=data.get('OGRN'),
+            INN=data.get('INN'),
+            chief=data.get('chief'),
+            email=data.get('email'),
+            target=data.get('target'),
+            price_project=data.get('price_project'),
+            implementation_period=data.get('implementation_period'),
+            sum_of_self_investments=data.get('sum_of_self_investments'),
+            loan_amount=data.get('loan_amount'),
+            term_use_of_the_loan=data.get('term_use_of_the_loan'),
+            proposed_collateral=data.get('proposed_collateral')
         )
-        if bid.is_valid:
-            bid.save()
-            logging('%s была создана Заявка № %d компании %s , ИНН %d на сумму %d'
-                    % (timezone.now(), bid.id, bid.name, bid.INN, bid.loan_amount)
-            )
-        # json_object = json.loads(bid.__dict__)
-        with mail.get_connection() as connection:
-            mail.EmailMessage(
-                'Заявка',
-                'message',
-                'from',
-                ['ezenkin@it-russ.com'],
-                connection=connection,
-            ).send()
-        return HttpResponse("Заявка создана.")
+        bid.save()
+        now = timezone.now()
+        topic = 'Заявка № %s компании %s , ИНН %s' % (bid.id, bid.name, bid.INN)
+        # TODO косяки со временем. Логи добавить
+        # logging('%s была создана' % now +
+        #         topic + 'на сумму %s' % bid.loan_amount)
+        email_body = ''
+        for (key, value) in ROWS.items():
+            row = value + ' : ' + data.get('%s' % key) + '\n'
+            email_body += row
+        send_mail(topic, email_body,
+                  settings.EMAIL_HOST_USER,
+                  ['egrazor@yandex.ru'])
+        # TODO добавить отправку письма о создании заявки юзеру
+        return HttpResponse(msg % bid.id)
+    else:
+        return HttpResponse('Вы ввели некорректные данные. Пожалуйта, попробуйте ещё раз.')
 
 
 
