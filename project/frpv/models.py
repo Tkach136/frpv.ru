@@ -7,7 +7,6 @@ class Bid(models.Model):
         verbose_name='наименование')
     OGRN = models.IntegerField(verbose_name='ОГРН')
     INN = models.IntegerField(
-        primary_key=True,
         verbose_name='ИНН')
     chief = models.CharField(
         max_length=100,
@@ -19,8 +18,8 @@ class Bid(models.Model):
         verbose_name='цель и краткое описание')
     price_project = models.FloatField(
         verbose_name='стоимость проекта')
-    implementation_period = models.DateField(
-        blank=True, null=True,
+    implementation_period = models.CharField(
+        max_length=100,
         verbose_name='срок реализации проекта')
     sum_of_self_investments = models.FloatField(
         verbose_name='сумма собственных вложений')
