@@ -18,5 +18,13 @@
     <input type="submit" value="Оставить заявку" />
 </form>
 
+<form method="post" action="{% url 'frpv:test_send' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>Введите что-угодно</p>
+    <input type="text" name="test" /><br>
+    <input type="submit" value="Отправить" />
+</form>
+
 </body>
 </html>
