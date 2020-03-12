@@ -1,982 +1,417 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<!-- For IE -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-		<!-- For Resposive Device -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>Региональный фонд развития промышленности Воронежской области</title>
-
-		<!-- Favicon -->
-		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.ico">
-
-
-		<!-- Main style sheet -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!-- responsive style sheet -->
-		<link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-
-		<!-- Fix Internet Explorer ______________________________________-->
-
-		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="vendor/html5shiv.js"></script>
-			<script src="vendor/respond.js"></script>
-		<![endif]-->
-			
-	</head>
-
-	<body>
-		<div class="main-page-wrapper">
-
-
-
-			<!-- 
-			=============================================
-				Theme Header
-			============================================== 
-			-->
-			<header class="theme-main-header">
-				<div class="container">
-					<a href="index.html" class="logo float-left tran4s"><img src="images/logo/factory.png" alt="Logo"></a>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<p style="color: white;">Региональный фонд развития промышленности Воронежской области</p>
-					</div>
-					
-				
-					<!-- ========================= Theme Feature Page Menu ======================= -->
-					<nav class="navbar float-right theme-main-menu one-page-menu" >
-					   <!-- Brand and toggle get grouped for better mobile display -->
-					   <div class="navbar-header">
-					     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-					       <span class="sr-only">Toggle navigation</span>
-					       Menu
-					       <i class="fa fa-bars" aria-hidden="true"></i>
-					     </button>
-					   </div>
-					   <!-- Collect the nav links, forms, and other content for toggling -->
-					   <div class="collapse navbar-collapse" id="navbar-collapse-1">
-					     <ul class="nav navbar-nav">
-							<li><a href="#">О ФОНДЕ</a></li>
-							<li><a href="#">УСЛУГИ</a></li>
-							<li><a href="#">НАШИ ПАРТНЕРЫ</a></li>
-							<li><a href="#">ПРЕСС-ЦЕНТР</a></li>
-							<li><a href="#">КОНТАКТЫ</a></li>
-							<li class="active"><a href="#">Search</a></li>
-					     </ul>
-					   </div><!-- /.navbar-collapse -->
-					</nav> <!-- /.theme-feature-menu -->
-				</div>
-			</header> <!-- /.theme-main-header -->
-
-
-			<!--
-			=====================================================
-				Theme Main SLider
-			=====================================================
-			-->
-			<div id="home" class="banner">
-	        	<div class="rev_slider_wrapper">
-					<!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
-						<div id="main-banner-slider" class="rev_slider video-slider" data-version="5.0.7">
-							<ul>
-								<!-- SLIDE -->
-								<li data-index="rs-280" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default"  data-title="Title Goes Here" data-description="">
-									<!-- MAIN IMAGE -->
-									<img src="images/home/bg.jpg"  alt="image" class="rev-slidebg" data-bgparallax="3" repeat data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
-									<!-- LAYERS -->
-
-									<!-- LAYER NR. 1 -->
-									<div class="tp-caption" 
-										data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['-05','-05','63','0']"
-										data-width="none"
-										data-height="none"
-										data-whitespace="nowrap"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="2000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="z-index: 6; white-space: nowrap;">
-										<div class="">
-											<h3 style="text-transform: none; color:white;">Региональный фонд развития промышленности Воронежской области</h3>
-										</div>
-									</div>
-
-
-									<!-- LAYER NR. 2 -->
-									<div class="tp-caption"
-										data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['52','52','125','80']"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on">
-										<a href="{% url 'frpv:application' %}" class="project-button hvr-bounce-to-right">Подать заявку</a>
-									</div>
-								
-								</li>
-							</ul>	
-						</div>
-					</div>
-	        </div> <!--  /#banner -->
-
-
-
-	        <!--
-			=====================================================
-				About us Section
-			=====================================================
-			-->
-			<section id="about-us">
-				<div class="container">
-					<div class="theme-title">
-						<h2 style="text-transform: none;">О Фонде</h2>
-						<p>Автономное учреждение "Региональный фонд развития промышленности Воронежской области" создан в целях стимулирования
-							развития промышленности региона. Фонд предоставляет господдержку предприятиям в форме льготного займа, а также бесплатной 
-							информационно-консультационной поддержки организациям, в том числе субъектам малого и среднего предпринимательства.
-						</p>
-						<p>
-							Финансирование осуществляется за счет совместных средств федерального и регионального фондов развития промышленности, общая сумма которых составляет около 600 млн рублей
-						</p>
-					</div> <!-- /.theme-title -->
-
-					<div class="row">
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-about-content">
-								<h5 style="text-transform: none;"><a href="#" class="tran3s">до 5 лет</a></h5>
-								<p>срок на реализацию проекта</p>
-							</div> <!-- /.single-about-content -->
-						</div> <!-- /.col -->
-
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-about-content">
-								<h5 style="text-transform: none;"><a href="#" class="tran3s"></a>20-100 млн руб</a></h5>
-								<p>сумма займа</p>
-							</div> <!-- /.single-about-content -->
-						</div> <!-- /.col -->
-
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-about-content">
-								<h5 style="text-transform: none;"><a href="#" class="tran3s">1-5%</a></h5>
-								<p>процентная ставка</p>
-							</div> <!-- /.single-about-content -->
-						</div> <!-- /.col -->
-
-					</div> <!-- /.row -->
-				</div> <!-- /.container -->
-			</section> <!-- /#about-us -->
-
-
-			<!--
-			=====================================================
-				Service Section
-			=====================================================
-			-->
-			<div id="service-section">
-				<div class="container">
-					<div class="theme-title">
-						<h2>SERVICES WE PROVIDE</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-					</div> <!-- /.theme-title -->
-
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content">
-								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><i class="fa fa-paint-brush" aria-hidden="true"></i></div>
-									<h6><a href="#" class="tran3s">Web Design</a></h6>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod, tempor incididunt labore et dolore magna aliqua. Ut enim ad minim ut veniam, quis nostrud exercitation ullamco aliquip ex ea commodo consequat. </p>
-							</div> <!-- /.single-service-content -->
-						</div> <!-- /.col-lg -->
-
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content">
-								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><i class="fa fa-camera" aria-hidden="true"></i></div>
-									<h6><a href="#" class="tran3s">Photography</a></h6>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod, tempor incididunt labore et dolore magna aliqua. Ut enim ad minim ut veniam, quis nostrud exercitation ullamco aliquip ex ea commodo consequat. </p>
-							</div> <!-- /.single-service-content -->
-						</div> <!-- /.col-lg -->
-
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content">
-								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
-									<h6><a href="#" class="tran3s">Web Development</a></h6>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod, tempor incididunt labore et dolore magna aliqua. Ut enim ad minim ut veniam, quis nostrud exercitation ullamco aliquip ex ea commodo consequat. </p>
-							</div> <!-- /.single-service-content -->
-						</div> <!-- /.col-lg -->
-
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content">
-								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
-									<h6><a href="#" class="tran3s">Online Marketing</a></h6>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod, tempor incididunt labore et dolore magna aliqua. Ut enim ad minim ut veniam, quis nostrud exercitation ullamco aliquip ex ea commodo consequat. </p>
-							</div> <!-- /.single-service-content -->
-						</div> <!-- /.col-lg -->
-
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content">
-								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><i class="fa fa-life-ring" aria-hidden="true"></i></div>
-									<h6><a href="#" class="tran3s">Digital Media</a></h6>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod, tempor incididunt labore et dolore magna aliqua. Ut enim ad minim ut veniam, quis nostrud exercitation ullamco aliquip ex ea commodo consequat. </p>
-							</div> <!-- /.single-service-content -->
-						</div> <!-- /.col-lg -->
-
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content">
-								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><i class="fa fa-anchor" aria-hidden="true"></i></div>
-									<h6><a href="#" class="tran3s">Support</a></h6>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod, tempor incididunt labore et dolore magna aliqua. Ut enim ad minim ut veniam, quis nostrud exercitation ullamco aliquip ex ea commodo consequat. </p>
-							</div> <!-- /.single-service-content -->
-						</div> <!-- /.col-lg -->
-					</div> <!-- /.row -->
-				</div> <!-- /.container -->
-			</div> <!-- /#service-section -->
-
-
-
-			<!--
-			=====================================================
-				Project Section
-			=====================================================
-			-->
-			<div id="project-section">
-				<div class="container">
-					<div class="theme-title">
-						<h2>OUR AWESOME PROJECTS</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-					</div> <!-- /.theme-title -->
-
-					<div class="project-menu">
-						<ul>
-	        				<li class="filter active tran3s" data-filter="all">All</li>
-							<li class="filter tran3s" data-filter=".web">Web Design</li>
-							<li class="filter tran3s" data-filter=".photo">Photography</li>
-							<li class="filter tran3s" data-filter=".webd">Web Development</li>
-							<li class="filter tran3s" data-filter=".om">Online Marketing</li>
-							<li class="filter tran3s" data-filter=".dmedia">Digital Media</li>
-							<li class="filter tran3s" data-filter=".support">Support</li>
-	        			</ul>
-					</div>
-
-					<div class="project-gallery clear-fix">
-						<div class="mix grid-item photo om dmedia">
-							<div class="single-img">
-								<img src="images/project/1.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item web webd dmedia support">
-							<div class="single-img">
-								<img src="images/project/2.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item photo webd support">
-							<div class="single-img">
-								<img src="images/project/3.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item web om">
-							<div class="single-img">
-								<img src="images/project/4.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item photo webd dmedia om">
-							<div class="single-img">
-								<img src="images/project/5.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item web webd dmedia om">
-							<div class="single-img">
-								<img src="images/project/6.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item photo om support">
-							<div class="single-img">
-								<img src="images/project/7.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item web support">
-							<div class="single-img">
-								<img src="images/project/8.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-						<div class="mix grid-item photo webd dmedia support">
-							<div class="single-img">
-								<img src="images/project/9.jpg" alt="Image">
-								<div class="opacity">
-									<div class="border-shape"><div><div>
-										<h6><a href="#">Sweet Photo</a></h6>
-										<ul>
-											<li>Business /</li>
-											<li>Service /</li>
-											<li>Product /</li>
-											<li>Template</li>
-										</ul></div></div>
-									</div> <!-- /.border-shape -->
-								</div> <!-- /.opacity -->
-							</div> <!-- /.single-img -->
-						</div> <!-- /.grid-item -->
-
-					</div> <!-- /.project-gallery -->
-				</div> <!-- /.container -->
-			</div> <!-- /#project-section -->
-
-			<!--
-			=====================================================
-				Page middle banner
-			=====================================================
-			-->
-
-			<div class="page-middle-banner">
-				<div class="opacity">
-					<h3>We Create Creative <span class="p-color">&amp;</span> Best Unique Design</h3>
-					<a href="#" class="hvr-bounce-to-right">Let's Work Together</a>
-				</div> <!-- /.opacity -->
-			</div> <!-- /.page-middle-banner -->
-
-
-			<!--
-			=====================================================
-				Team Section
-			=====================================================
-			-->
-			<div id="team-section">
-				<div class="container">
-					<div class="theme-title">
-						<h2>Meet our Team</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-					</div> <!-- /.theme-title -->
-
-					<div class="clear-fix team-member-wrapper">
-						<div class="float-left">
-							<div class="single-team-member">
-								<div class="img">
-									<img src="images/team/1.jpg" alt="Image">
-									<div class="opacity tran4s">
-										<h4>Gonzalez Gina</h4>
-										<span>Web Developer</span>
-										<p>On the other hand, We denounce ut with righteo indignation and dislike men who are so beguiled and demoralized.</p>
-									</div>
-								</div> <!-- /.img -->
-								<div class="member-name">
-									<h6>Gonzalez Gina</h6>
-									<p>Web Developer</p>
-									<ul>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									</ul>
-								</div> <!-- /.member-name -->
-							</div> <!-- /.single-team-member -->
-						</div> <!-- /float-left -->
-
-						<div class="float-left">
-							<div class="single-team-member">
-								<div class="img">
-									<img src="images/team/2.jpg" alt="Image">
-									<div class="opacity tran4s">
-										<h4>Holly Vincenzini</h4>
-										<span>Media Partner</span>
-										<p>On the other hand, We denounce ut with righteo indignation and dislike men who are so beguiled and demoralized.</p>
-									</div>
-								</div> <!-- /.img -->
-								<div class="member-name">
-									<h6>Holly Vincenzini</h6>
-									<p>Media Partner</p>
-									<ul>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									</ul>
-								</div> <!-- /.member-name -->
-							</div> <!-- /.single-team-member -->
-						</div> <!-- /float-left -->
-
-						<div class="float-left">
-							<div class="single-team-member">
-								<div class="img">
-									<img src="images/team/3.jpg" alt="Image">
-									<div class="opacity tran4s">
-										<h4>Ramirez Minita</h4>
-										<span>Graphic Design</span>
-										<p>On the other hand, We denounce ut with righteo indignation and dislike men who are so beguiled and demoralized.</p>
-									</div>
-								</div> <!-- /.img -->
-								<div class="member-name">
-									<h6>Ramirez Minita</h6>
-									<p>Graphic Design</p>
-									<ul>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									</ul>
-								</div> <!-- /.member-name -->
-							</div> <!-- /.single-team-member -->
-						</div> <!-- /float-left -->
-					</div> <!-- /.team-member-wrapper -->
-				</div> <!-- /.conatiner -->
-			</div> <!-- /#team-section -->
-
-
-
-			<!--
-			=====================================================
-				Skill Section
-			=====================================================
-			-->
-			<div id="skill-section">
-				<div class="container">
-					<div class="clear-fix">
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="img"><img src="images/home/2.jpg" alt="Image"></div>
-						</div> <!-- /.col- -->
-
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="skills-progress skills">
-								<div class="habilidades_contenedor">
-							        <div class="codeconSkills">
-							            <div class="codeconSkillbar">
-							            	<div class="skill-text">
-							            		<span class="codeconSkillArea">Web Development</span>
-							            	</div>
-							                <div class="skillBar" data-percent="89%">
-							                	<span class="PercentText">89%</span>
-							                </div>
-							            </div>
-							            <div class="codeconSkillbar">
-							            	<div class="skill-text">
-							            		<span class="codeconSkillArea ">Online Marketing</span>
-							                    
-							            	</div>
-								            <div class="skillBar" data-percent="58%">
-								                <span class="PercentText">58%</span>
-								            </div>
-							            </div>
-								        <div class="codeconSkillbar">
-								        	<div class="skill-text">
-							            		<span class="codeconSkillArea">Digital Media</span>
-							                    
-							            	</div>
-								            <div class="skillBar" data-percent="49%">
-								                <span class="PercentText">49%</span>
-								            </div>
-								        </div>
-								        <div class="codeconSkillbar">
-								        	<div class="skill-text">
-							            		<span class="codeconSkillArea">Photography</span>
-							                    
-							            	</div>
-								            <div class="skillBar" data-percent="76%">
-								                <span class="PercentText">76%</span>
-								            </div>
-								        </div>
-								        <div class="codeconSkillbar">
-								        	<div class="skill-text">
-							            		<span class="codeconSkillArea">Creative Design</span>
-							                    
-							            	</div>
-								            <div class="skillBar" data-percent="64%">
-								                <span class="PercentText ">64%</span>
-								            </div>
-								        </div>
-							    	</div> <!-- /.codeconSkills -->
-							    </div> <!-- /.habilidades_contenedor -->
-							</div> <!-- /.skills-progress -->
-						</div>
-					</div> <!-- /.clear-fix -->
-				</div> <!-- /.container -->
-			</div> <!-- /#skill-section -->
-
-
-
-			<!--
-			=====================================================
-				Our Client
-			=====================================================
-			-->
-			<div id="our-client">
-				<div class="container">
-					<div class="theme-title">
-						<h2>OUR HAPPY CLIENTS</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-					</div> <!-- /.theme-title -->
-
-					<div class="client-slider">
-						<div class="item">
-							<img src="images/home/c1.jpg" alt="Client">
-							<p>Our successful construction approach is based on aggressive subcontractor administration, employ-ment of competent personnel, accurate schedule control, quality control and cost control. We employ only qualified subcontractors who share our goal in creating quality projects.</p>
-							<h6>- Spryte Loriano -</h6>
-						</div> <!-- /.item -->
-						<div class="item">
-							<img src="images/home/c2.jpg" alt="Client">
-							<p>Our successful construction approach is based on aggressive subcontractor administration, employ-ment of competent personnel, accurate schedule control, quality control and cost control. We employ only qualified subcontractors who share our goal in creating quality projects.</p>
-							<h6>- Spryte Loriano -</h6>
-						</div> <!-- /.item -->
-						<div class="item">
-							<img src="images/home/c3.jpg" alt="Client">
-							<p>Our successful construction approach is based on aggressive subcontractor administration, employ-ment of competent personnel, accurate schedule control, quality control and cost control. We employ only qualified subcontractors who share our goal in creating quality projects.</p>
-							<h6>- Spryte Loriano -</h6>
-						</div> <!-- /.item -->
-					</div> <!-- /.client-slider -->
-				</div> <!-- /.container -->
-			</div> <!-- /#our-client -->
-
-			
-
-			<!--
-			=====================================================
-				Pricing Section
-			=====================================================
-			-->
-			<div id="pricing-section">
-				<div class="container">
-					<div class="clear-fix">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="single-price-table hvr-float-shadow">
-								<h4>Basic</h4>
-								<p>The best to start</p>
-								<strong class="color1">$9.99 <span>/monthly</span></strong>
-								<ul>
-									<li>3,600 Keywords</li>
-									<li>50 Social Accounts</li>
-									<li>25 Analytics Campaigns</li>
-									<li>45 Email Accounts</li>
-									<li>24/7 Support</li>
-								</ul>
-								<a href="#" class="tran3s p-color-bg">BUY IT NOW</a>
-							</div> <!-- /.single-price-table -->
-						</div> <!-- /.col -->
-
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="single-price-table hvr-float-shadow">
-								<h4>Advanced</h4>
-								<p>The best to start</p>
-								<strong class="color2">$39.99 <span>/monthly</span></strong>
-								<ul>
-									<li>3,600 Keywords</li>
-									<li>50 Social Accounts</li>
-									<li>25 Analytics Campaigns</li>
-									<li>45 Email Accounts</li>
-									<li>24/7 Support</li>
-								</ul>
-								<a href="#" class="tran3s p-color-bg">BUY IT NOW</a>
-							</div> <!-- /.single-price-table -->
-						</div> <!-- /.col -->
-
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="single-price-table hvr-float-shadow">
-								<h4>PREMIUM</h4>
-								<p>The best to start</p>
-								<strong class="color3">$59.99 <span>/monthly</span></strong>
-								<ul>
-									<li>3,600 Keywords</li>
-									<li>50 Social Accounts</li>
-									<li>25 Analytics Campaigns</li>
-									<li>45 Email Accounts</li>
-									<li>24/7 Support</li>
-								</ul>
-								<a href="#" class="tran3s p-color-bg">BUY IT NOW</a>
-							</div> <!-- /.single-price-table -->
-						</div> <!-- /.col -->
-					</div>
-				</div> <!-- /.container -->
-			</div> <!-- /#pricing-section -->
-
-
-
-			<!--
-			=====================================================
-				Blog Section
-			=====================================================
-			-->
-			<div id="blog-section">
-				<div class="container">
-					<div class="theme-title">
-						<h2>OUR LATEST Blog</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-					</div> <!-- /.theme-title -->
-
-					<div class="clear-fix">
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="single-news-item">
-								<div class="img"><img src="images/blog/1.jpg" alt="Image">
-									<a href="blog-details.html" class="opacity tran4s"><i class="fa fa-link" aria-hidden="true"></i></a>
-								</div> <!-- /.img -->
-
-								<div class="post">
-									<h6><a href="blog-details.html" class="tran3s">Playback: Akufo-Addo speaks to business community</a></h6>
-									<a href="blog-details.html">Posted by <span class="p-color">admin</span>  at 04 Feb, 2017</a>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna sed accumsan... <a href="blog-details.html" class="tran3s">Read More</a></p>
-								</div> <!-- /.post -->
-							</div> <!-- /.single-news-item -->
-						</div> <!-- /.col- -->
-
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="single-news-item">
-								<div class="img"><img src="images/blog/2.jpg" alt="Image">
-									<a href="blog-details.html" class="opacity tran4s"><i class="fa fa-link" aria-hidden="true"></i></a>
-								</div> <!-- /.img -->
-
-								<div class="post">
-									<h6><a href="blog-details.html" class="tran3s">Playback: Akufo-Addo speaks to business community</a></h6>
-									<a href="blog-details.html">Posted by <span class="p-color">admin</span>  at 04 Feb, 2017</a>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna sed accumsan... <a href="blog-details.html" class="tran3s">Read More</a></p>
-								</div> <!-- /.post -->
-							</div> <!-- /.single-news-item -->
-						</div> <!-- /.col- -->
-
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="single-news-item">
-								<div class="img"><img src="images/blog/3.jpg" alt="Image">
-									<a href="blog-details.html" class="opacity tran4s"><i class="fa fa-link" aria-hidden="true"></i></a>
-								</div> <!-- /.img -->
-
-								<div class="post">
-									<h6><a href="blog-details.html" class="tran3s">Playback: Akufo-Addo speaks to business community</a></h6>
-									<a href="blog-details.html">Posted by <span class="p-color">admin</span>  at 04 Feb, 2017</a>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna sed accumsan... <a href="blog-details.html" class="tran3s">Read More</a></p>
-								</div> <!-- /.post -->
-							</div> <!-- /.single-news-item -->
-						</div> <!-- /.col- -->
-					</div> <!-- /.clear-fix -->
-				</div> <!-- /.container -->
-			</div> <!-- /#blog-section -->
-
-
-
-			<!--
-			=====================================================
-				Partner Section
-			=====================================================
-			-->
-			<div id="partner-section">
-				<div class="container">
-					<div id="partner_logo" class="owl-carousel owl-theme">
-						<div class="item"><img src="images/logo/p1.png" alt="logo"></div>
-						<div class="item"><img src="images/logo/p2.png" alt="logo"></div>
-						<div class="item"><img src="images/logo/p3.png" alt="logo"></div>
-						<div class="item"><img src="images/logo/p4.png" alt="logo"></div>
-						<div class="item"><img src="images/logo/p5.png" alt="logo"></div>
-						<div class="item"><img src="images/logo/p2.png" alt="logo"></div>
-					</div> <!-- End .partner_logo -->
-				</div> <!-- /.container -->
-			</div> <!-- /#partner-section -->
-
-
-
-			<!--
-			=====================================================
-				Contact Section
-			=====================================================
-			-->
-			<div id="contact-section">
-				<div class="container">
-					<div class="clear-fix contact-address-content">
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="left-side">
-								<h2>Contact Info</h2>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majori have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a pas of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. <br><br>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et dolore magna aliqua.</p>
-
-								<ul>
-									<li>
-										<div class="icon tran3s round-border p-color-bg"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-										<h6>Address</h6>
-										<p>Freedom Way, Jersey City, NJ 07305, USA</p>
-									</li>
-									<li>
-										<div class="icon tran3s round-border p-color-bg"><i class="fa fa-phone" aria-hidden="true"></i></div>
-										<h6>Phone</h6>
-										<p>+88 01911854378</p>
-									</li>
-									<li>
-										<div class="icon tran3s round-border p-color-bg"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-										<h6>Email</h6>
-										<p>backpiper.com@gmail.com</p>
-									</li>
-								</ul>
-							</div> <!-- /.left-side -->
-						</div> <!-- /.col- -->
-
-
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="map-area">
-								<h2>Our Location</h2>
-								<div id="map"></div>
-							</div> <!-- /.map-area -->
-						</div> <!-- /.col- -->
-					</div> <!-- /.contact-address-content -->
-
-
-
-					<!-- Contact Form -->
-					<div class="send-message">
-						<h2>Send Message</h2>
-
-						<form action="inc/sendemail.php" class="form-validation" autocomplete="off" method="post">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="single-input">
-										<input type="text" placeholder="First Name*" name="Fname">
-									</div> <!-- /.single-input -->
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="single-input">
-										<input type="text" placeholder="Last Name*" name="Lname">
-									</div> <!-- /.single-input -->
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-									<div class="single-input">
-										<input type="email" placeholder="Your Email*" name="email">
-									</div> <!-- /.single-input -->
-								</div>
-							</div> <!-- /.row -->
-							<div class="single-input">
-								<input type="text" placeholder="Subject" name="sub">
-							</div> <!-- /.single-input -->
-							<textarea placeholder="Write Message" name="message"></textarea>
-
-
-							<button class="tran3s p-color-bg">Send Message</button>
-						</form>
-
-
-						<!-- Contact Form Validation Markup -->
-						<!-- Contact alert -->
-						<div class="alert-wrapper" id="alert-success">
-							<div id="success">
-								<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
-								<div class="wrapper">
-					               	<p>Your message was sent successfully.</p>
-					             </div>
-					        </div>
-					    </div> <!-- End of .alert_wrapper -->
-					    <div class="alert-wrapper" id="alert-error">
-					        <div id="error">
-					           	<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
-					           	<div class="wrapper">
-					               	<p>Sorry!Something Went Wrong.</p>
-					            </div>
-					        </div>
-					    </div> <!-- End of .alert_wrapper -->
-					</div> <!-- /.send-message -->
-				</div> <!-- /.container -->
-			</div> <!-- /#contact-section -->
-
-
-
-			<!--
-			=====================================================
-				Footer
-			=====================================================
-			-->
-			<footer>
-				<div class="container">
-					<a href="index.html" class="logo"><img src="images/logo/logo.png" alt="Logo"></a>
-
-					<ul>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-					</ul>
-					<p>Copyright @2018 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-				</div>
-			</footer>
-
-
-
-
-			<!-- =============================================
-				Loading Transition
-			============================================== -->
-			<div id="loader-wrapper">
-				<div id="preloader_1">
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	            </div>
-			</div>
-
-			
-	        <!-- Scroll Top Button -->
-			<button class="scroll-top tran3s p-color-bg">
-				<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-			</button>
-
-
-
-
-		<!-- Js File_________________________________ -->
-
-		<!-- j Query -->
-		<script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
-
-		<!-- Bootstrap JS -->
-		<script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
-
-		<!-- Vendor js _________ -->
-		
-		<!-- revolution -->
-		<script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.video.min.js"></script>
-
-		<!-- Google map js -->
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ8VrXgGZ3QSC-0XubNhuB2uKKCwqVaD0&callback=goMap" type="text/javascript"></script> <!-- Gmap Helper -->
-		<script src="vendor/gmaps.min.js"></script>
-		<!-- owl.carousel -->
-		<script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
-		<!-- mixitUp -->
-		<script type="text/javascript" src="vendor/jquery.mixitup.min.js"></script>
-		<!-- Progress Bar js -->
-		<script type="text/javascript" src="vendor/skills-master/jquery.skills.js"></script>
-		<!-- Validation -->
-		<script type="text/javascript" src="vendor/contact-form/validate.js"></script>
-		<script type="text/javascript" src="vendor/contact-form/jquery.form.js"></script>
-
-
-		<!-- Theme js -->
-		<script type="text/javascript" src="js/theme.js"></script>
-		<script type="text/javascript" src="js/map-script.js"></script>
-
-		</div> <!-- /.main-page-wrapper -->
-	</body>
-</html>
+{% load static %}
+<!-- saved from url=(0039)https://tilda.cc/tpls/page/?q=basic01ru -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АУ "РФРП ВО"</title>
+    <meta property="og:url" content="http://examples-ru.tilda.ws/basic01ru">
+    <meta property="og:title" content='АУ "РФРП ВО"'>
+    <meta property="og:description" content="Региональный фонд развития промышленности Воронежской области">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://static.tildacdn.com/tild6239-6638-4865-b638-633631326634/rawpixelcom340966.jpg">
+    <meta property="fb:app_id" content="257953674358265">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://tilda.ws/">
+    <link rel="dns-prefetch" href="https://static.tildacdn.com/">
+    <meta name="description" content="Региональный фонд развития промышленности Воронежской области">
+    <link rel="canonical" href="http://examples-ru.tilda.ws/basic01ru">
+    <link rel="shortcut icon" href="{% static 'frpv/img/favicon.ico' %}" type="image/x-icon">
+    <!-- Assets -->
+    <link rel="stylesheet" href="{% static 'frpv/index_files/tilda-grid-3.0.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'frpv/index_files/tilda-blocks-2.12.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'frpv/index_files/tilda-animation-1.0.min.css' %}" type="text/css" media="all">
+    <script type="text/javascript" async="" id="tildastatscript" src="{% static 'frpv/index_files/tildastat-0.2.min.js' %}"></script>
+    <script src="{% static 'frpv/index_files/jquery-1.10.2.min.js' %}"></script>
+    <script src="{% static 'frpv/index_files/tilda-scripts-2.8.min.js' %}"></script>
+    <script src="{% static 'frpv/index_files/tilda-blocks-2.7.js' %}"></script>
+    <script src="{% static 'frpv/index_files/lazyload-1.3.min.js' %}"></script>
+    <script src="{% static 'frpv/index_files/tilda-animation-1.0.min.js' %}"></script>
+    <script src="{% static 'frpv/index_files/tilda-forms-1.0.min.js' %}"></script>
+
+</head>
+<body class="t-body" style="margin: 0px;">
+<!--allrecords-->
+<div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="426094" data-tilda-page-id="1972363" data-tilda-page-alias="basic01ru" data-tilda-formskey="e60fb256749207b602eadb73126a1282">
+    <div id="rec38921750" class="r t-rec" style=" " data-animationappear="off" data-record-type="446">
+    <!-- T446 -->
+    <div id="nav38921750marker"></div>
+    <div id="nav38921750" class="t446 t446__positionabsolute " style="background-color: rgba(0,0,0,0.0); height:100px; " data-bgcolor-hex="#000000" data-bgcolor-rgba="rgba(0,0,0,0.0)" data-navmarker="nav38921750marker" data-appearoffset="" data-bgopacity-two="" data-menushadow="0" data-bgopacity="0.0" data-menu-items-align="right" data-menu="yes">
+        <div class="t446__maincontainer " style="height:100px;">
+
+            <!-- ЛОГОТИП -->
+            <div class="t446__leftwrapper">
+                <div class="t446__leftlogowrapper">
+                    <div><div class="t128__logo t-title" field="title" style="color:#ffffff;font-weight:400;">
+            <!-- Региональный фонд развития промышленности Воронежской области-->
+                        <a href="{% static 'frpv/img/logo.png' %}" alt="frpv-logo"></a>
+                    </div>
+                    </div> </div>
+            </div>
+            <!-- /ЛОГОТИП -->
+
+            <!-- ПРАВАЯ ЧАСТЬ -->
+            <div class="t446__rightwrapper" style="text-align: center; padding-left: 109.5px;">
+                <div class="t446__rightmenuwrapper">
+                    <ul class="t446__list">
+                        <li class="t446__list_item">
+                            <a class="#" style="color:#ffffff;font-weight:600;" data-menu-item-number="1">О ФОНДЕ</a>
+                        </li>
+                        <li class="t446__list_item">
+                            <a class="t-menu__link-item" href="#" style="color:#ffffff;font-weight:600;" data-menu-item-number="2">УСЛУГИ</a>
+                        </li>
+                        <li class="t446__list_item">
+                            <a class="t-menu__link-item" href="#" style="color:#ffffff;font-weight:600;" data-menu-item-number="3">НАШИ ПАРТНЕРЫ</a>
+                        </li>
+                        <li class="t446__list_item">
+                            <a class="t-menu__link-item" href="#" style="color:#ffffff;font-weight:600;" data-menu-item-number="4">ПРЕСС-ЦЕНТР</a>
+                        </li>
+                        <li class="t446__list_item">
+                            <a class="t-menu__link-item" href="#" style="color:#ffffff;font-weight:600;" data-menu-item-number="5">КОНТАКТЫ</a>
+                        </li>
+                        <li class="t446__list_item">
+                            <a class="t-menu__link-item" href="#" style="color:#ffffff;font-weight:600;" data-menu-item-number="3">ПОИСК</a>
+                        </li>
+                    </ul>
+            </div>
+                <div class="t446__additionalwrapper">
+
+                </div> </div>
+            <!-- /ПРАВАЯ ЧАСТЬ -->
+
+        </div></div>
+
+        <script type="text/javascript">	$(document).ready(function() { t446_setLogoPadding('38921750'); });	var t446__doResize; $(window).resize(function(){ t446_checkOverflow('38921750', '100'); clearTimeout(t446__doResize); t446__doResize = setTimeout(function() { t446_checkOverflow('38921750', '100'); }, 200); }); $(window).load(function() { t446_checkOverflow('38921750', '100'); });	$(document).ready(function() { t446_checkOverflow('38921750', '100'); }); $(document).ready(function() { t446_highlight(); });
+$(window).resize(function() { t446_setBg('38921750');
+});
+$(document).ready(function() { t446_setBg('38921750');
+});</script> <!--[if IE 8]>
+    <style>#rec38921750 .t446 { filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9000000', endColorstr='#D9000000');
+}</style><![endif]--> </div>
+    <div id="rec38921751" class="r t-rec" style=" " data-animationappear="off" data-record-type="205">
+        <!-- cover -->
+        <div class="t-cover" id="recorddiv38921751" bgimgfield="img" style="height:100vh; background-image:url(&#39;https://static.tildacdn.com/tild6239-6638-4865-b638-633631326634/-/resize/20x/rawpixelcom340966.jpg&#39;);">
+            <div class="t-cover__carrier loaded" id="coverCarry38921751" data-content-cover-id="38921751"
+                 data-content-cover-bg="{% static 'frpv/img/bg.jpg' %}" data-content-cover-height="100vh" data-content-cover-parallax="" style="background-image: url(&quot;https://thumb.tildacdn.com/tild6239-6638-4865-b638-633631326634/-/format/webp/rawpixelcom340966.jpg&quot;); height: 100vh; background-attachment: scroll;" src=""></div>
+            <div class="t-cover__filter" style="height:100vh;background-image: -moz-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: -o-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: -ms-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#66000000&#39;, endColorstr=&#39;#4c000000&#39;);"></div>
+
+            <div class="t-container">
+                <div class="t-width t-width_7" style="margin:0 auto;">
+                    <div class="t-cover__wrapper t-valign_middle" style="height:100vh; position: relative;z-index:1;">
+                        <div class="t182">
+                            <div data-hook-content="covercontent">
+                                <div class="t182__wrapper">
+                                    <div class="t182__title t-title t-title_xl t-animate t-animate_started"
+                                         data-animate-style="fadeinup" data-animate-group="yes"
+                                         style="transition-delay: 0s; font-size: 42px;" field="title">
+                                        Региональный фонд развития промышленности Воронежской области
+                                    </div>
+                                    <div class="t182__descr t-descr t-descr_lg t-animate t-animate_started" data-animate-style="fadeinup" data-animate-group="yes" style="transition-delay: 0.3s;" field="descr">
+                                        Здесь вставить 2 поля с белым фоном<br>
+                                    </div>
+                                    <div class="t182__buttons">
+                                        <a href="{% url 'frpv:application' %}" target="" class="t-btn t-animate t-animate_started" data-animate-style="fadeinup" data-animate-group="yes" style="color: rgb(255, 255, 255); background-color: rgb(245, 145, 79); border-radius: 3px; text-transform: uppercase; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px 0px;">
+                                            <table style="width:100%; height:100%;">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Подать заявку</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </a>
+                                    </div> </div> </div> </div> </div> </div> </div>
+
+            <!-- arrow -->
+
+            <div class="t-cover__arrow">
+                <div class="t-cover__arrow-wrapper t-cover__arrow-wrapper_animated">
+                    <div class="t-cover__arrow_mobile">
+                        <svg class="t-cover__arrow-svg" style="fill:#ffffff;" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592"><g>
+                            <path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg></div></div></div> <!-- arrow --> </div> </div>
+
+
+    <!-- БЛОК 2 "О ФОНДЕ"-->
+    <div id="rec38921752" class="r t-rec t-rec_pt_180 t-rec_pb_180 r_showed r_anim" style="padding-top:50px;padding-bottom:180px; " data-record-type="486"><!-- T486 --><div class="t486"> <div class="t-container">
+    <div class="t486__top ">
+        <div class="t486__textwrapper t-align_left" style="height: 460px;">
+            <div class="t486__content t-valign_middle">
+                <div class="t486__box">
+                    <div class="t486__title t-align_center t-title t-title_xs " field="title" style="color:#000000;">
+                        О Фонде </div>
+                    <div class="t486__descr t-descr t-descr_md " field="descr" style="color:#000000;">
+                        <p>Автономное учреждение "Региональный фонд развития промышленности Воронежской области" был создан в целях</p>
+                        <p>стимулирования развития промышленности региона. Фонд представляет господдержку предприятиям в форме </p>
+                        <p>льготного займа, а также бесплатной информационно-консультационной поддержки организациям, в том числе</p>
+                        <p>субъектам малого и среднего предпринимательства</p>
+                        <br>
+                        <p>Финансирование осуществляется за счёт совместных средств федерального и регионального фондов развития</p>
+                        <p>промышленности, общая сумма которых составляет около 600 млн рублей.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="t-container">
+                <div class="t490__col t-col t-col_4 t-align_center t-item">
+        <div class="t490__wrappercenter ">
+            <div class="t-heading t-heading_md" style="" field="li_title__1476968690512">
+                до 5 лет </div>
+            <br>
+            <div class="t-descr t-descr_xs" style="" field="li_descr__1476968690512">
+                срок на реализацию проекта</div>
+        </div>
+    </div>
+        <div class="t490__col t-col t-col_4 t-align_center t-item">
+            <div class="t490__wrappercenter ">
+                <div class="t-heading t-heading_md" style="" field="li_title__1476968700508">
+                    20-100 млн руб </div>
+                <br>
+                <div class="t-descr t-descr_xs" style="" field="li_descr__1476968700508">
+                    сумма займа </div>
+            </div>
+        </div>
+                <div class="t490__col t-col t-col_4 t-align_center t-item">
+                    <div class="t490__wrappercenter ">
+                        <div class="t-heading t-heading_md" style="" field="li_title__1476968722790">
+                            1-5% </div>
+                        <br>
+                        <div class="t-descr t-descr_xs" style="" field="li_descr__1476968722790">
+                            процентная ставка </div>
+                    </div>
+                </div>
+                <div class="t-clear t490__separator" style=""></div>
+
+    </div>
+
+
+
+</div></div>
+    <script type="text/javascript"> $(window).resize(function() { t486_setHeight('38921752'); }); $(document).ready(function() { t486_setHeight('38921752'); }); $('.t486').bind('displayChanged',function(){ t486_setHeight('38921752'); }); </script>
+</div>
+
+
+    <!-- 3 БЛОК -->
+    <div id="rec38921753" class="r t-rec r_anim r_showed" style=" " data-record-type="215">
+        <a name="service" style="font-size:0;"></a>
+    </div>
+    <div id="rec38921754" class="r t-rec t-rec_pt_150 t-rec_pb_180" style="padding-top:150px;padding-bottom:180px;background-color:#f5f5f5; " data-record-type="490" data-bg-color="#f5f5f5" data-animationappear="off">
+        <!-- t490 -->
+        <div class="t490">
+            <div class="t-section__container t-container">
+                <div class="t-col t-col_12">
+                    <div class="t-section__topwrapper t-align_center">
+                        <div class="t-section__title t-title t-title_xs" field="btitle">
+                            Направления деятельности АУ "РФРП ВО"</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="t-container">
+                <div class="t-section__topwrapper t-align_left">
+                    <div class="t-section__title t-title_xxs" field="btitle">
+                        Государственная поддержка предприятий в форме льготного займа</div>
+                </div>
+                <div class="t490__col t-col t-col_3 t-align_center t-item"
+                     style="background-color: lightskyblue;padding-top:20px; height: 300px;">
+                    <img src="./index_files/Tilda_Icons_30_system_settings.svg" data-original="https://static.tildacdn.com/lib/tildaicon/34313138-3432-4531-b432-623839666466/Tilda_Icons_30_system_settings.svg" class="t490__img t-img loaded" imgfield="li_img__1476968722790" style="width:90px;">
+        <div class="t490__wrappercenter ">
+            <div class="t-section__topwrapper t-align_left">
+                <div class="t-section__title t-title" field="btitle">
+                    Создание и развитие промышленной инфраструктуры</div>
+            </div>
+        </div>
+    </div>
+        <div class="t490__col t-col t-col_3 t-align_center t-item"
+             style="background-color: lightskyblue;padding-top:20px; height: 300px;">
+           <img src="./index_files/15re_man.svg" data-original="https://static.tildacdn.com/lib/tildaicon/30616531-6331-4262-b239-313933633239/15re_man.svg" class="t490__img t-img loaded" imgfield="li_img__1476968690512" style="width:90px;">
+            <div class="t490__wrappercenter ">
+                <div class="t-section__topwrapper t-align_left">
+                <div class="t-section__title t-title" field="btitle">
+                    Взаимодействие с крупными заказчиками</div>
+            </div>
+            </div>
+        </div>
+                <div class="t490__col t-col t-col_3 t-align_center t-item"
+                     style="background-color: lightskyblue;padding-top:20px; height: 300px;">
+                    <img src="./index_files/Tilda_Icons_30_system_settings.svg" data-original="https://static.tildacdn.com/lib/tildaicon/34313138-3432-4531-b432-623839666466/Tilda_Icons_30_system_settings.svg" class="t490__img t-img loaded" imgfield="li_img__1476968722790" style="width:90px;">
+                    <div class="t490__wrappercenter ">
+                        <div class="t-section__topwrapper t-align_left">
+                <div class="t-section__title t-title" field="btitle">
+                    Подбор мер государственной федеральной и региональной поддержки для реализации ивестиционных проектов</div>
+            </div>
+                    </div>
+                </div>
+
+                <div class="t490__col t-col t-col_3 t-align_center t-item"
+                     style="background-color: lightskyblue;padding-top:20px; height: 300px;">
+                    <img src="./index_files/Tilda_Icons_30_system_settings.svg" data-original="https://static.tildacdn.com/lib/tildaicon/34313138-3432-4531-b432-623839666466/Tilda_Icons_30_system_settings.svg" class="t490__img t-img loaded" imgfield="li_img__1476968722790" style="width:90px;">
+                    <div class="t490__wrappercenter ">
+                    <div class="t-section__topwrapper t-align_left">
+                <div class="t-section__title t-title" field="btitle">
+                    Подготовка к участию в форумах, семинарах, конференциях, выставках</div>
+            </div>
+                </div>
+                </div>
+                <div class="t-section__topwrapper t-align_left">
+                    <div class="t-clear t490__separator" style=""></div>
+                    <div class="t-section__title t-title_xxs" field="btitle">
+                        Бесплатная консультационная помощь организациям, в том числе, субъектам МСП</div>
+                </div>
+                <div class="t490__col t-col t-col_3 t-align_center t-item"
+                     style="background-color: lightskyblue;padding-top:20px; height: 300px;">
+                    <img src="./index_files/Tilda_Icons_30_system_settings.svg" data-original="https://static.tildacdn.com/lib/tildaicon/34313138-3432-4531-b432-623839666466/Tilda_Icons_30_system_settings.svg" class="t490__img t-img loaded" imgfield="li_img__1476968722790" style="width:90px;">
+                    <div class="t490__wrappercenter ">
+                        <div class="t-section__topwrapper t-align_left">
+                <div class="t-section__title t-title" field="btitle">
+                     Отбор проектов в рамках представления финансовой поддеркжи совместно с ФРП по программам "Совместные займы"</div>
+            </div>
+                    </div>
+                </div>
+                <div class="t490__col t-col t-col_3 t-align_center t-item"
+                     style="background-color: lightskyblue;padding-top:20px; height: 300px;">
+                    <img src="./index_files/Tilda_Icons_30_system_settings.svg" data-original="https://static.tildacdn.com/lib/tildaicon/34313138-3432-4531-b432-623839666466/Tilda_Icons_30_system_settings.svg" class="t490__img t-img loaded" imgfield="li_img__1476968722790" style="width:90px;">
+                    <div class="t490__wrappercenter ">
+                        <div class="t-section__topwrapper t-align_left">
+                <div class="t-section__title t-title" field="btitle">
+                    Мониторинг реализации проектов</div>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="rec38921755" class="r t-rec r_anim r_showed" style=" " data-record-type="581">
+
+        <!-- cover --><div class="t-cover" id="recorddiv38921755" bgimgfield="img" style="height:560px; background-image:url(&#39;https://static.tildacdn.com/tild6433-6564-4637-a664-633236363765/-/resize/20x/blob.png&#39;);"><div class="t-cover__carrier loaded" id="coverCarry38921755" data-content-cover-id="38921755" data-content-cover-bg="https://static.tildacdn.com/tild6433-6564-4637-a664-633236363765/blob.png" data-content-cover-height="560px" data-content-cover-parallax="fixed" style="background-image: url(&quot;https://thumb.tildacdn.com/tild6433-6564-4637-a664-633236363765/-/format/webp/blob.png&quot;); height: 560px;" src=""></div> <div class="t-cover__filter" style="height:560px;background-image: -moz-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: -o-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: -ms-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#33000000&#39;, endColorstr=&#39;#19000000&#39;);"></div><div class="t-container"> <div class="t-col t-col_10 t-prefix_1 t-align_center"><div class="t-cover__wrapper t-valign_middle" style="height:560px; position: relative;z-index:1;"> <div class="t581"> <div data-hook-content="covercontent"> <div class="t581__wrapper t-align_center"> <div class="t581__title t-title t-title_sm t-margin_auto" style="" field="title">Мотивирующая фраза</div> <div class="t581__descr t-descr t-descr_xl t-margin_auto" style="max-width:600px;" field="descr">Добавьте пару строк текста и расскажите что получит пользователь, кликнув на кнопку.<br></div> <div class="t581__buttons"> <div class="t581__buttons-wrapper t-margin_auto"> <svg class="t581__arrow-icon_mobile" style="fill:#ffffff;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 70"><path d="M30.6 47.5c-.6-.5-1.6-.4-2.1.2L19 59.6V5.5c0-.8-.7-1.5-1.5-1.5S16 4.7 16 5.5v54.1L6.5 47.7c-.6-.6-1.5-.7-2.1-.2-.7.5-.8 1.5-.3 2.1l12.2 15.2c.3.4.7.6 1.2.6s.9-.2 1.2-.6l12.2-15.2c.5-.6.4-1.6-.3-2.1z"></path></svg> <svg class="t581__arrow-icon " style="fill:#ffffff; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 180"><path d="M54.1 108c-.5 0-.9-.2-1.2-.6-.5-.7-.3-1.6.4-2.1 1.5-1 9.5-5.5 14.6-8.3-17.4-.5-31.3-7.3-41.3-20C9.9 55.7 9.5 24.2 14.2 3.7c.2-.8 1-1.3 1.8-1.1.8.2 1.3 1 1.1 1.8-4.6 19.9-4.2 50.3 11.8 70.8 9.5 12.2 23 18.6 39.9 18.9h.3l-3.2-4c-1.4-1.7-2.7-3.3-4.1-5.1-.7-.9-1.5-1.9-2.3-2.9-.5-.6-.4-1.6.2-2.1.6-.5 1.6-.4 2.1.2 0 0 0 .1.1.1l6.4 7.9c.5.6.9 1.1 1.4 1.7 1.5 1.8 3.1 3.6 4.3 5.5 0 .1.1.1.1.2.1.2.1.3.2.5v.3c0 .2 0 .3-.1.5 0 .1-.1.1-.1.2-.1.2-.2.3-.3.4-.1.1-.2.1-.3.2 0 0-.1 0-.2.1-.9.4-16 8.6-18.2 10.1-.4 0-.7.1-1 .1z"></path></svg> <a href="https://tilda.cc/tpls/page/?q=basic01ru" target="" class="t581__btn t-btn " style="color:#ffffff;background-color:#f5914f;border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;"><table style="width:100%; height:100%;"><tbody><tr><td>Призыв к действию</td></tr></tbody></table></a> </div> </div> </div> </div> </div> </div> </div> </div> </div> <style>#rec38921755 .t-btn:not(.t-animate_no-hover):hover{ color: #4c79ff !important; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7) !important;	}	#rec38921755 .t-btn:not(.t-animate_no-hover){ -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;	}</style></div><div id="rec38921756" class="r t-rec r_anim r_showed" style=" " data-record-type="215"><a name="about" style="font-size:0;"></a></div><div id="rec38921757" class="r t-rec t-rec_pt_165 t-rec_pb_180 r_anim r_showed" style="padding-top:165px;padding-bottom:180px; " data-record-type="508"><!-- t508 --><div class="t508"><div class="t-section__container t-container"><div class="t-col t-col_12"><div class="t-section__topwrapper t-align_center"><div class="t-section__title t-title t-title_xs" field="btitle">Преимущества компании </div><div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">Помогите клиенту принять решение, рассказав о своих сильных сторонах и причинах работать именно с вами</div></div></div></div><div class="t-container"> <div class="t-col t-col_6 t-prefix_3 t-item"> <div class="t-cell t-valign_top"> <svg class="t508__checkmark" style="width:55px; height:55px;" fill="#f5914f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z"></path><path d="M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z"></path></svg> </div> <div class="t508__textwrapper t-cell t-valign_top" style=""> <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889049104">Преимущество 1</div> <div class="t-descr t-descr_sm" style="" field="li_descr__1476889049104">Расскажите, что отличает ваши услуги от услуг в других компаниях </div> </div> </div> <div class="t-clear t508__separator" style=""></div> <div class="t-col t-col_6 t-prefix_3 t-item"> <div class="t-cell t-valign_top"> <svg class="t508__checkmark" style="width:55px; height:55px;" fill="#f5914f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z"></path><path d="M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z"></path></svg> </div> <div class="t508__textwrapper t-cell t-valign_top" style=""> <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889075209">Преимущество 2</div> <div class="t-descr t-descr_sm" style="" field="li_descr__1476889075209">Расскажите, чему вы уделяете больше всего внимания в работе с клиентами </div> </div> </div> <div class="t-clear t508__separator" style=""></div> <div class="t-col t-col_6 t-prefix_3 t-item"> <div class="t-cell t-valign_top"> <svg class="t508__checkmark" style="width:55px; height:55px;" fill="#f5914f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z"></path><path d="M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z"></path></svg> </div> <div class="t508__textwrapper t-cell t-valign_top" style=""> <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889079427">Преимущество 3</div> <div class="t-descr t-descr_sm" style="" field="li_descr__1476889079427">Расскажите, в чем преимущество работы именно с вашей командой </div> </div> </div> </div></div></div><div id="rec38921758" class="r t-rec t-rec_pt_165 t-rec_pb_210" style="padding-top:165px;padding-bottom:210px;background-color:#f5f5f5; " data-record-type="525" data-bg-color="#f5f5f5" data-animationappear="off"><!-- t525 --><div class="t525"><div class="t-section__container t-container"><div class="t-col t-col_12"><div class="t-section__topwrapper t-align_center"><div class="t-section__title t-title t-title_xs" field="btitle">Отзывы наших клиентов</div></div></div></div> <div class="t525__container t-container"> <div class="t525__col t-col t-col_6"> <div class="t-cell t-valign_top"> <div class="t525__bgimg t525__img_circle t-bgimg loaded" data-original="https://static.tildacdn.com/tild3165-3563-4261-b339-643731323234/christianarivers2499.jpg" bgimgfield="li_img__1478014691630" style="background-image: url(&quot;https://thumb.tildacdn.com/tild3165-3563-4261-b339-643731323234/-/cover/100x100/center/center/-/format/webp/christianarivers2499.jpg&quot;);" src=""></div> </div> <div class="t525__textwrapper t525__textwr_leftpadding t-cell t-valign_top"> <div class="t525__text t-text t-text_xs" field="li_text__1478014691630" style=" ">Вы профессионалы. При первой встрече я рассказала об идее проекта, а вы помогли доработать и трансформировать ее во что-то особое.</div> <div class="t525__title t-name t-name_xs" field="li_title__1478014691630" style=" ">Тамара Ларина</div> <div class="t525__descr t-descr t-descr_xxs" field="li_descr__1478014691630" style=" ">Менеджер проектов в <a href="https://tilda.cc/">Pixels</a></div> </div> </div> <div class="t525__col t-col t-col_6"> <div class="t-cell t-valign_top"> <div class="t525__bgimg t525__img_circle t-bgimg loaded" data-original="https://static.tildacdn.com/tild6332-6632-4161-b239-373936333933/ks48name21449job14l.jpg" bgimgfield="li_img__1478014727987" style="background-image: url(&quot;https://thumb.tildacdn.com/tild6332-6632-4161-b239-373936333933/-/cover/100x100/center/center/-/format/webp/ks48name21449job14l.jpg&quot;);" src=""></div> </div> <div class="t525__textwrapper t525__textwr_leftpadding t-cell t-valign_top"> <div class="t525__text t-text t-text_xs" field="li_text__1478014727987" style=" ">Мы узнали много нового и получили очень дельные советы. Очень рекомендуем Максима в качестве гида!</div> <div class="t525__title t-name t-name_xs" field="li_title__1478014727987" style=" ">Рита Кац</div> <div class="t525__descr t-descr t-descr_xxs" field="li_descr__1478014727987" style=" ">HR в <a href="https://google.com/">DD agency</a></div> </div> </div> <div class="t-clear t525__separator" style=""></div> <div class="t525__col t-col t-col_6"> <div class="t-cell t-valign_top"> <div class="t525__bgimg t525__img_circle t-bgimg loaded" data-original="https://static.tildacdn.com/tild3133-6134-4634-a233-326266323563/ks48name22023job35.jpg" bgimgfield="li_img__1478014761774" style="background-image: url(&quot;https://thumb.tildacdn.com/tild3133-6134-4634-a233-326266323563/-/cover/100x100/center/center/-/format/webp/ks48name22023job35.jpg&quot;);" src=""></div> </div> <div class="t525__textwrapper t525__textwr_leftpadding t-cell t-valign_top"> <div class="t525__text t-text t-text_xs" field="li_text__1478014761774" style=" ">Отличные рребята, очень артистичные, умело организовали досуг. Обязательно приеду в следующем году!</div> <div class="t525__title t-name t-name_xs" field="li_title__1478014761774" style=" ">Юлия Санина</div> <div class="t525__descr t-descr t-descr_xxs" field="li_descr__1478014761774" style=" ">Основатель <a href="https://google.com/">Pic Pen studio</a></div> </div> </div> <div class="t525__col t-col t-col_6"> <div class="t-cell t-valign_top"> <div class="t525__bgimg t525__img_circle t-bgimg loaded" data-original="https://static.tildacdn.com/tild6561-6431-4238-a133-656431353965/knzten560.jpg" bgimgfield="li_img__1478014798002" style="background-image: url(&quot;https://thumb.tildacdn.com/tild6561-6431-4238-a133-656431353965/-/cover/100x100/center/center/-/format/webp/knzten560.jpg&quot;);" src=""></div> </div> <div class="t525__textwrapper t525__textwr_leftpadding t-cell t-valign_top"> <div class="t525__text t-text t-text_xs" field="li_text__1478014798002" style=" ">Работая в большой корпорации, сложнее все держать под контролем. Так что это идеальный сервис для нас.</div> <div class="t525__title t-name t-name_xs" field="li_title__1478014798002" style=" ">Саша Коротких</div> <div class="t525__descr t-descr t-descr_xxs" field="li_descr__1478014798002" style=" ">Креативный директор <a href="https://google.com/">SoSoul magazine</a></div> </div> </div> </div></div></div><div id="rec38921759" class="r t-rec r_anim r_showed" style=" " data-record-type="215"><a name="form" style="font-size:0;"></a></div><div id="rec38921760" class="r t-rec" style=" " data-animationappear="off" data-record-type="720"><!-- t720 --><!-- cover --><div class="t-cover" id="recorddiv38921760" bgimgfield="img" style="height:100vh; background-image:url(&#39;https://static.tildacdn.com/tild3964-3831-4932-b334-336562653062/-/resize/20x/blob.png&#39;);"><div class="t-cover__carrier loaded" id="coverCarry38921760" data-content-cover-id="38921760" data-content-cover-bg="https://static.tildacdn.com/tild3964-3831-4932-b334-336562653062/blob.png" data-content-cover-height="100vh" data-content-cover-parallax="" style="background-image: url(&quot;https://thumb.tildacdn.com/tild3964-3831-4932-b334-336562653062/-/format/webp/blob.png&quot;); height: 100vh; background-attachment: scroll;" src=""></div> <div class="t-cover__filter" style="height:100vh;background-image: -moz-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: -o-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: -ms-linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));background-image: linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.90));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#33000000&#39;, endColorstr=&#39;#19000000&#39;);"></div> <div class="t720"> <div class="t-container"> <div class="t-width t-width_10 t720__mainblock t-align_center"> <div class="t-cover__wrapper t-valign_middle" style="height:100vh; position: relative;z-index: 1;"> <div class="t720__mainwrapper" data-hook-content="covercontent"> <div class="t720__textwrapper"> <div class="t720__title t-title t-title_sm t-margin_auto" style="" field="title">Заголовок формы</div> <div class="t720__descr t-descr t-descr_xl t-margin_auto" style="max-width:600px;" field="descr">Укажите поля и данные, которые необходимо заполнить клиенту для заказа услуги или связи с вами.</div> </div> <div> <form id="form38921760" name="form38921760" role="form" action="https://tilda.cc/tpls/page/?q=basic01ru" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3 " data-success-callback="t720_onSuccess"> <!-- NO ONE SERVICES CONNECTED --> <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;"></div> <div class="t-form__inputsbox"> <div class="t-input-group t-input-group_nm" data-input-lid="1496398308530"> <div class="t-input-block"> <input type="text" name="Name" class="t-input js-tilda-rule " value="" placeholder="Имя" data-tilda-rule="name" style="color:#ffffff; border:1px solid #ffffff; "> <div class="t-input-error"></div> </div> </div> <div class="t-input-group t-input-group_em" data-input-lid="1509715109349"> <div class="t-input-block"> <input type="text" name="Email" class="t-input js-tilda-rule " value="" placeholder="E-mail" data-tilda-rule="email" style="color:#ffffff; border:1px solid #ffffff; "> <div class="t-input-error"></div> </div> </div> <div class="t-input-group t-input-group_in" data-input-lid="1509715118955"> <div class="t-input-block"> <input type="text" name="Input" class="t-input js-tilda-rule " value="" placeholder="Текст" style="color:#ffffff; border:1px solid #ffffff; "> <div class="t-input-error"></div> </div> </div> <div class="t-form__errorbox-middle"> <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;"> <div class="t-form__errorbox-text t-text t-text_md"> <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p> </div> </div></div> <div class="t-form__submit"> <button type="submit" class="t-submit" style="color:#ffffff;background-color:#f5914f;border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;">Отправить</button> </div> </div> <div class="t-form__errorbox-bottom"> <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;"> <div class="t-form__errorbox-text t-text t-text_md"> <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p> <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p> </div> </div> </div> <div style="position: absolute; left: -5000px; bottom:0;"><input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1"></div></form><style>#rec38921760 input::-webkit-input-placeholder {color:#ffffff; opacity: 0.5;}	#rec38921760 input::-moz-placeholder {color:#ffffff; opacity: 0.5;}	#rec38921760 input:-moz-placeholder {color:#ffffff; opacity: 0.5;}	#rec38921760 input:-ms-input-placeholder {color:#ffffff; opacity: 0.5;}	#rec38921760 textarea::-webkit-input-placeholder {color:#ffffff; opacity: 0.5;}	#rec38921760 textarea::-moz-placeholder {color:#ffffff; opacity: 0.5;}	#rec38921760 textarea:-moz-placeholder {color:#ffffff; opacity: 0.5;}	#rec38921760 textarea:-ms-input-placeholder {color:#ffffff; opacity: 0.5;}</style> </div> </div> </div> </div> </div> </div> </div> <script type="text/javascript"> $('#rec38921760').find('.js-form-proccess').on('tildaform:aftererror', function(e){ e.preventDefault(); t720_fixcontentheight('38921760'); });</script></div><div id="rec38921761" class="r t-rec r_anim r_showed" style=" " data-record-type="215"><a name="contacts" style="font-size:0;"></a></div><div id="rec38921762" class="r t-rec t-rec_pt_150 t-rec_pb_150 r_anim r_showed" style="padding-top:150px;padding-bottom:150px; " data-record-type="551"><!-- t551--><div class="t551"> <div class="t-container"> <div class="t-col t-col_6 t-prefix_3 t-align_center"> <div class="t551__title t-name t-name_xs" style="" field="title" data-animate-order="1">НАШИ КОНТАКТЫ</div> <div class="t551__contacts t-title t-title_xxs" style="" field="text" data-animate-order="2" data-animate-delay="0.3">+1 123 456 78 90<br>hello@company.com</div> <div class="t551__address t-text t-text_sm" style="" field="text2" data-animate-order="3" data-animate-delay="0.3">Мы в социальных сетях:</div> <div class="t-sociallinks"> <div class="t-sociallinks__wrapper"> <div class="t-sociallinks__item"> <a href="https://google.com/" target="_blank"> <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><desc>Facebook</desc><path style="fill:#f5914f;" d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z"></path></svg> </a> </div> <div class="t-sociallinks__item"> <a href="https://google.com/" target="_blank"> <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><desc>Twitter</desc><path style="fill:#f5914f;" d="M47.762,24c0,13.121-10.639,23.76-23.761,23.76S0.24,37.121,0.24,24c0-13.124,10.639-23.76,23.761-23.76 S47.762,10.876,47.762,24 M38.031,12.375c-1.177,0.7-2.481,1.208-3.87,1.481c-1.11-1.186-2.694-1.926-4.455-1.926 c-3.364,0-6.093,2.729-6.093,6.095c0,0.478,0.054,0.941,0.156,1.388c-5.063-0.255-9.554-2.68-12.559-6.367 c-0.524,0.898-0.825,1.947-0.825,3.064c0,2.113,1.076,3.978,2.711,5.07c-0.998-0.031-1.939-0.306-2.761-0.762v0.077 c0,2.951,2.1,5.414,4.889,5.975c-0.512,0.14-1.05,0.215-1.606,0.215c-0.393,0-0.775-0.039-1.146-0.109 c0.777,2.42,3.026,4.182,5.692,4.232c-2.086,1.634-4.712,2.607-7.567,2.607c-0.492,0-0.977-0.027-1.453-0.084 c2.696,1.729,5.899,2.736,9.34,2.736c11.209,0,17.337-9.283,17.337-17.337c0-0.263-0.004-0.527-0.017-0.789 c1.19-0.858,2.224-1.932,3.039-3.152c-1.091,0.485-2.266,0.811-3.498,0.958C36.609,14.994,37.576,13.8,38.031,12.375"></path></svg> </a> </div> <div class="t-sociallinks__item"> <a href="https://google.com/" target="_blank"> <svg class="t-sociallinks__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 30 30" xml:space="preserve"><desc>Instagram</desc><path style="fill:#f5914f;" d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path><path style="fill:#f5914f;" d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path>
+    <path style="fill:#f5914f;" d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path></svg> </a> </div> </div></div> </div> </div></div></div><div id="rec38921763" class="r t-rec r_anim r_showed" style=" " data-record-type="394">
+
+    <style>#allrecords .t-text a,
+#allrecords .t-descr a,
+#allrecords .t-heading a,
+#allrecords .t-title a,
+#allrecords .t-impact-text a,
+#allrecords .t-text-impact a,
+#allrecords .t-name a,
+#allrecords .t-uptitle a{ color: inherit; font-weight: inherit; border-bottom: 2px solid #f5914f; -webkit-box-shadow: inset 0px -1px 0px 0px #f5914f; -moz-box-shadow: inset 0px -1px 0px 0px #f5914f; box-shadow: inset 0px -1px 0px 0px #f5914f;
+}</style>
+    </div>
+
+    <div id="rec39327909" class="r t-rec t-rec_pt_45 t-rec_pb_15" style="padding-top:45px;padding-bottom:15px;background-color:#000000; " data-record-type="56" data-bg-color="#000000" data-animationappear="off"><!-- T046 --><div class="t046"><div class="t-container"><div class="t-col t-col_6 t-prefix_3"><div class="t046__text t-text t-text_xs" field="text">
+        <div style="color:#a6a6a6;" data-customstyle="yes">
+            Фотографии и тексты использованы для демонстрации возможностей шаблона сайта, пожалуйста, не используйте их в коммерческих целях.
+        </div></div></div></div></div></div></div>
+<!--/allrecords-->
+<!-- Tilda copyright. Don't remove this line -->
+<div class="t-tildalabel " id="tildacopy" data-tilda-sign="426094#1972363">
+    <a href="https://tilda.cc/?upm=426094" class="t-tildalabel__link">
+        <div class="t-tildalabel__wrapper">
+            <div class="t-tildalabel__txtleft">Made on </div>
+            <div class="t-tildalabel__wrapimg">
+                <img src="./index_files/tildacopy.png" class="t-tildalabel__img"></div>
+            <div class="t-tildalabel__txtright">Tilda</div></div></a></div>
+
+<div id="SLG_balloon_obj" alt="0" style="display: block;">
+    <div id="SLG_button" class="SLG_ImTranslatorLogo" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/imtranslator-s.png&quot;); display: none;"></div>
+    <div id="SLG_shadow_translation_result2" style="display: none;"></div>
+    <div id="SLG_shadow_translator">
+        <div id="SLG_planshet">
+            <div id="SLG_arrow_up" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/up.png&quot;);"></div>
+            <div style="visibility:hidden;" id="SLG_Bproviders"></div>
+            <div id="SLG_alert_bbl" style="display: none;">
+                <div id="SLHKclose" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/delete.png&quot;);"></div>
+                <div id="SLG_alert_cont"></div></div>
+            <div id="SLG_TB">
+                <table id="SLG_tables" cellspacing="1">
+                    <tr>
+                        <td class="SLG_td" width="10%" align="right">
+                            <input id="SLG_locer" type="checkbox" title="Зафиксировать язык">
+                        </td>
+                        <td class="SLG_td" width="20%" align="left">
+                            <select id="SLG_lng_from" class="SLG_lngs">
+                                <option value="auto">Определить язык</option>
+                                <option value="az">Азербайджанский</option>
+                                <option value="sq">Албанский</option>
+                                <option value="am">Амхарский</option>
+                                <option value="en">Английский</option>
+                                <option value="ar">Арабский</option>
+                                <option value="hy">Армянский</option>
+                                <option value="af">Африкаанс</option>
+                                <option value="eu">Баскский</option>
+                                <option value="be">Белорусский</option>
+                                <option value="bn">Бенгальский</option>
+                                <option value="my">Бирманский</option>
+                                <option value="bg">Болгарский</option>
+                                <option value="bs">Боснийский</option>
+                                <option value="cy">Валлийский</option>
+                                <option value="hu">Венгерский</option>
+                                <option value="vi">Вьетнамский</option>
+                                <option value="haw">Гавайский</option>
+                                <option value="ht">Гаитянский</option>
+                                <option value="gl">Галисийский</option>
+                                <option value="nl">Голландский</option>
+                                <option value="el">Греческий</option>
+                                <option value="ka">Грузинский</option>
+                                <option value="gu">Гуджарати</option>
+                                <option value="da">Датский</option>
+                                <option value="zu">Зулу</option>
+                                <option value="iw">Иврит</option>
+                                <option value="ig">Игбо</option>
+                                <option value="yi">Идиш</option>
+                                <option value="id">Индонезийский</option>
+                                <option value="ga">Ирландский</option>
+                                <option value="is">Исландский</option><option value="es">Испанский</option><option value="it">Итальянский</option><option value="yo">Йоруба</option><option value="kk">Казахский</option><option value="kn">Каннада</option><option value="ca">Каталанский</option><option value="ky">Киргизский</option><option value="zh-TW">Китайский Трад</option><option value="zh-CN">Китайский Упр</option><option value="ko">Корейский</option><option value="co">Корсиканский</option><option value="ku">Курманджи</option><option value="km">Кхмерский</option><option value="xh">Кхоса</option><option value="lo">Лаосский</option><option value="la">Латинский</option><option value="lv">Латышский</option><option value="lt">Литовский</option><option value="lb">Люксембургский</option><option value="mk">Македонский</option><option value="mg">Малагасийский</option><option value="ms">Малайский</option><option value="ml">Малаялам</option><option value="mt">Мальтийский</option><option value="mi">Маори</option><option value="mr">Маратхи</option><option value="mn">Монгольский</option><option value="de">Немецкий</option><option value="ne">Непальский</option><option value="no">Норвежский</option><option value="pa">Панджаби</option><option value="fa">Персидский</option><option value="pl">Польский</option><option value="pt">Португальский</option><option value="ps">Пушту</option><option value="ro">Румынский</option><option value="ru">Русский</option><option value="sm">Самоанский</option><option value="ceb">Себуанский</option><option value="sr">Сербский</option><option value="st">Сесото</option><option value="si">Сингальский</option><option value="sd">Синдхи</option><option value="sk">Словацкий</option><option value="sl">Словенский</option><option value="so">Сомалийский</option><option value="sw">Суахили</option><option value="su">Сунданский</option><option value="tg">Таджикский</option><option value="th">Тайский</option><option value="ta">Тамильский</option><option value="te">Телугу</option><option value="tr">Турецкий</option><option value="uz">Узбекский</option><option value="uk">Украинский</option><option value="ur">Урду</option><option value="tl">Филиппинский</option><option value="fi">Финский</option><option value="fr">Французский</option><option value="fy">Фризский</option><option value="ha">Хауса</option><option value="hi">Хинди</option><option value="hmn">Хмонг</option><option value="hr">Хорватский</option><option value="ny">Чева</option><option value="cs">Чешский</option><option value="sv">Шведский</option><option value="sn">Шона</option><option value="gd">Шотландский (гэльский)</option><option value="eo">Эсперанто</option><option value="et">Эстонский</option><option value="jw">Яванский</option><option value="ja">Японский</option></select></td><td class="SLG_td" width="3" align="center"><div id="SLG_switch_b" title="Переключить направление" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/switchb.png&quot;);"></div></td><td class="SLG_td" width="20%" align="left"><select id="SLG_lng_to" class="SLG_lngs"><option value="az">Азербайджанский</option><option value="sq">Албанский</option><option value="am">Амхарский</option><option value="en">Английский</option><option value="ar">Арабский</option><option value="hy">Армянский</option><option value="af">Африкаанс</option><option value="eu">Баскский</option><option value="be">Белорусский</option><option value="bn">Бенгальский</option><option value="my">Бирманский</option><option value="bg">Болгарский</option><option value="bs">Боснийский</option><option value="cy">Валлийский</option><option value="hu">Венгерский</option><option value="vi">Вьетнамский</option><option value="haw">Гавайский</option><option value="ht">Гаитянский</option><option value="gl">Галисийский</option><option value="nl">Голландский</option><option value="el">Греческий</option><option value="ka">Грузинский</option><option value="gu">Гуджарати</option><option value="da">Датский</option><option value="zu">Зулу</option><option value="iw">Иврит</option><option value="ig">Игбо</option><option value="yi">Идиш</option><option value="id">Индонезийский</option><option value="ga">Ирландский</option><option value="is">Исландский</option><option value="es">Испанский</option><option value="it">Итальянский</option><option value="yo">Йоруба</option><option value="kk">Казахский</option><option value="kn">Каннада</option><option value="ca">Каталанский</option><option value="ky">Киргизский</option><option value="zh-TW">Китайский Трад</option><option value="zh-CN">Китайский Упр</option><option value="ko">Корейский</option><option value="co">Корсиканский</option><option value="ku">Курманджи</option><option value="km">Кхмерский</option><option value="xh">Кхоса</option><option value="lo">Лаосский</option><option value="la">Латинский</option><option value="lv">Латышский</option><option value="lt">Литовский</option><option value="lb">Люксембургский</option><option value="mk">Македонский</option><option value="mg">Малагасийский</option><option value="ms">Малайский</option><option value="ml">Малаялам</option><option value="mt">Мальтийский</option><option value="mi">Маори</option><option value="mr">Маратхи</option><option value="mn">Монгольский</option><option value="de">Немецкий</option><option value="ne">Непальский</option><option value="no">Норвежский</option><option value="pa">Панджаби</option><option value="fa">Персидский</option><option value="pl">Польский</option><option value="pt">Португальский</option><option value="ps">Пушту</option><option value="ro">Румынский</option><option selected="selected" value="ru">Русский</option><option value="sm">Самоанский</option><option value="ceb">Себуанский</option><option value="sr">Сербский</option><option value="st">Сесото</option><option value="si">Сингальский</option><option value="sd">Синдхи</option><option value="sk">Словацкий</option><option value="sl">Словенский</option><option value="so">Сомалийский</option><option value="sw">Суахили</option><option value="su">Сунданский</option><option value="tg">Таджикский</option><option value="th">Тайский</option><option value="ta">Тамильский</option><option value="te">Телугу</option><option value="tr">Турецкий</option><option value="uz">Узбекский</option><option value="uk">Украинский</option><option value="ur">Урду</option><option value="tl">Филиппинский</option><option value="fi">Финский</option><option value="fr">Французский</option><option value="fy">Фризский</option><option value="ha">Хауса</option><option value="hi">Хинди</option><option value="hmn">Хмонг</option><option value="hr">Хорватский</option><option value="ny">Чева</option><option value="cs">Чешский</option><option value="sv">Шведский</option><option value="sn">Шона</option><option value="gd">Шотландский (гэльский)</option><option value="eo">Эсперанто</option><option value="et">Эстонский</option><option value="jw">Яванский</option><option value="ja">Японский</option></select></td>
+                        <td class="SLG_td" width="5%" align="center"> </td>
+                        <td class="SLG_td" width="8%" align="center">
+                            <div id="SLG_TTS_voice" title="undefined" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/ttsvoice.png&quot;);"></div>
+                        </td>
+                        <td class="SLG_td" width="8%" align="center">
+                            <div id="SLG_copy" title="Скопировать" class="SLG_copy" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/copy.png&quot;);">
+                                <div id="SLG_copy_tip"></div></div>
+                        </td>
+                        <td class="SLG_td" width="8%" align="center">
+                            <div id="SLG_bbl_font_patch"></div>
+                            <div id="SLG_bbl_font" title="Размер шрифта" class="SLG_bbl_font" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/font.png&quot;);"></div>
+                        </td>
+                        <td class="SLG_td" width="8%" align="center">
+                            <div id="SLG_bbl_help" title="Справка" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/bhelp.png&quot;);"></div>
+                        </td>
+                        <td class="SLG_td" width="15%" align="right">
+                            <div id="SLG_pin" class="SLG_pin_off" title="Закрепить всплывающее окно" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/pin-on.png&quot;);">
+                            </div>
+                        </td>
+                    </tr>
+                </table></div></div>
+
+        <div id="SLG_shadow_translation_result" style="visibility: visible;"></div>
+        <div id="SLG_loading" class="SLG_loading" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/loading.gif&quot;);"></div>
+        <div id="SLG_player2" style="display: none;"></div>
+        <div id="SLG_alert100" style="display: none;">Звуковая функция ограничена 200 символами</div>
+        <div id="SLG_Balloon_options" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/bg3.png&quot;) rgb(255, 255, 255);"><div id="SLG_arrow_down" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/down.png&quot;);"></div>
+
+            <table id="SLG_tbl_opt" width="100%">
+                <tr>
+                    <td class="SLG_td" width="5%" align="center">
+                        <input id="SLG_BBL_locer" type="checkbox" checked="1" title="Показывать кнопку ImTranslator Bubble 3 секунд">
+                    </td>
+                    <td class="SLG_td" width="5%" align="left">
+                        <div id="SLG_BBL_IMG" title="Показывать кнопку ImTranslator Bubble 3 секунд" style="background: url(&quot;chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/img/util/bbl-logo.png&quot;);">
+                        </div>
+                    </td>
+        <td class="SLG_td" width="70%" align="center">
+            <a href="chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/html/options/options.html?bbl" target="_blank" class="SLG_options" title="Показать настройки">Настройки</a> :
+            <a href="chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/html/options/options.html?hist" target="_blank" class="SLG_options" title="История переводов">История</a> :
+            <a href="chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/html/options/options.html?feed" target="_blank" class="SLG_options" title="Обратная связь">Обратная связь</a> :
+            <a href="https://imtranslator.net/extensions/?tp=op-GT&amp;a=0" target="_blank" class="SLG_options" title="Сделать пожертвование">Donate</a>
+        </td>
+        <td class="SLG_td" width="15%" align="right">
+            <span id="SLG_Balloon_Close" class="SLG_options" title="Закрыть">Закрыть</span>
+        </td>
+    </tr>
+    </table>
+
+    </div></div></div></body></html>
