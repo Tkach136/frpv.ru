@@ -66,8 +66,7 @@ def test_send(request):
 
 
 def index(request):
-    content = request.headers.items()
-    return HttpResponse(content)
+    return render(request, 'frpv/index.html')
 
 
 def application(request):
@@ -78,7 +77,9 @@ def application(request):
 def send(request):
     if request.method != 'POST':
         return HttpResponse('Заполните недостающие поля.')
-    elif request.method == 'POST':
+    elif request.POST == {}:
+        return HttpResponse('Вы ввели некорректные данные. Пожалуйта, попробуйте ещё раз.')
+    else:
         data = request.POST
         bid = Bid(
             name=data.get('name'),
@@ -109,8 +110,7 @@ def send(request):
                   ['egrazor@yandex.ru'])
         # TODO добавить отправку письма о создании заявки юзеру
         return HttpResponse(msg % bid.id)
-    else:
-        return HttpResponse('Вы ввели некорректные данные. Пожалуйта, попробуйте ещё раз.')
+
 
 
 
