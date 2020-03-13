@@ -46,23 +46,10 @@ ROWS = {
 }
 
 msg = """
-Заявка %s успешно создана! 
+Заявка № %s успешно создана! 
 Наши менеджеры свяжутся с Вами в самое ближайшее время. 
 С уважением, Региональный фонд развития промышленности Воронежской области.
 """
-
-
-def test_send(request):
-    if request.method != 'POST':
-        return HttpResponse('Вы ввели некорректные данные. Пожалуйста, попробуйте ещё раз.')
-    elif request.method == 'POST':
-        data = request.POST.get('name')
-        # data = json.loads(data)
-        send_mail('topic', data,
-                  settings.EMAIL_HOST_USER,
-                  ['egrazor@yandex.ru']
-                  )
-        return HttpResponse(data)
 
 
 def index(request):
