@@ -56,7 +56,7 @@ def test_send(request):
     if request.method != 'POST':
         return HttpResponse('Вы ввели некорректные данные. Пожалуйста, попробуйте ещё раз.')
     elif request.method == 'POST':
-        data = request.POST.get('test')
+        data = request.POST.get('name')
         # data = json.loads(data)
         send_mail('topic', data,
                   settings.EMAIL_HOST_USER,
@@ -71,7 +71,7 @@ def index(request):
 
 def application(request):
     context = {'labels': labels}
-    return render(request, 'frpv/application.html', context)
+    return render(request, 'frpv/new_app.html', context)
 
 
 def send(request):

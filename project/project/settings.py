@@ -25,7 +25,7 @@ SECRET_KEY = '%30hwv_x75!af32^2(($$)i_@^5+dos=x7+ksg!pjhn_o-vl!y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Email settings
 
