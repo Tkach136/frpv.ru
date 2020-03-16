@@ -50,6 +50,14 @@ msg = """
 Наши менеджеры свяжутся с Вами в самое ближайшее время. 
 С уважением, Региональный фонд развития промышленности Воронежской области.
 """
+by_user = """
+Заявка на финансирование %s (ИНН %s) успешно создана. 
+Номер заявки: %s 
+Наши менеджеры свяжутся с Вами в течение суток. 
+С уважением, Региональный фонд развития промышленности Воронежской области.
++7 (473) 212-75-01
+rfrp@govvrn.ru
+"""
 
 
 def index(request):
@@ -84,7 +92,7 @@ def send(request):
         )
         bid.save()
         now = timezone.now()
-        topic = 'Заявка № %s компании %s , ИНН %s' % (bid.id, bid.name, bid.INN)
+        topic = 'Заявка на финансирование № %s компании %s , ИНН %s' % (bid.id, bid.name, bid.INN)
         # TODO косяки со временем. Логи добавить
         # logging('%s была создана' % now +
         #         topic + 'на сумму %s' % bid.loan_amount)
@@ -92,9 +100,21 @@ def send(request):
         for (key, value) in ROWS.items():
             row = value + ' : ' + data.get('%s' % key) + '\n'
             email_body += row
-        send_mail(topic, email_body,
-                  settings.EMAIL_HOST_USER,
-                  ['egrazor@yandex.ru'])
+        # email на сервер
+        send_mail(
+            topic,
+            email_body,
+            settings.EMAIL_HOST_USER,
+            ['egrazor@yandex.ru']
+        )
+        # email пользователю
+        msg_by_user = by_user % (bid.name, bid.INN, bid.id)
+        send_mail(
+            topic,
+            msg_by_user,
+            settings.EMAIL_HOST_USER,
+            ['%s' % bid.email]
+        )
         # TODO добавить отправку письма о создании заявки юзеру
         return HttpResponse(msg % bid.id)
 
