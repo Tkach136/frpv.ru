@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django_db_logging',
     'debug_toolbar',
     'bootstrap4',
+    'django_archive',
 
     # my app
     'frpv',
@@ -90,6 +91,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
+
+# archive settings
+ARCHIVE_DIRECTORY = os.path.join(os.environ['USERPROFILE'], 'backups')
+
 
 
 # Database
