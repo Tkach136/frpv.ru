@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('send/', views.send, name='send'),
     path('application/', views.application, name='application'),
+    path('navigator/', views.navigator, name='navigator'),
 ]

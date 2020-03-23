@@ -68,6 +68,9 @@ def application(request):
     context = {'labels': labels}
     return render(request, 'frpv/new_app.html', context)
 
+def navigator(request):
+    return render(request, 'frpv/navig.html')
+
 
 def send(request):
     if request.method != 'POST':
