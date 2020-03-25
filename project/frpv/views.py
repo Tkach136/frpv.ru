@@ -8,7 +8,7 @@ from django.conf import settings
 from django_db_logging import logging
 from django.utils import timezone
 import json
-from pprint import pformat
+from .models import Entry, Topic
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
           'price_project', 'implementation_period', 'sum_of_self_investments',
@@ -68,14 +68,15 @@ def application(request):
     context = {'labels': labels}
     return render(request, 'frpv/new_app.html', context)
 
+
 def navigator(request):
     return render(request, 'frpv/navig.html')
 
-def archive(request):
-    return render(request, 'frpv/arhiv.html')
 
-def news(request):
-    return render(request, 'frpv/news.html')
+def archive(request):
+    context = Entry.objects.all()
+    return render(request, 'frpv/arhiv.html', {'entries': context})
+
 
 def send(request):
     if request.method != 'POST':
