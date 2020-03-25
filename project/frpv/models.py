@@ -36,3 +36,23 @@ class Bid(models.Model):
 
     class Meta:
         ordering = ['name']
+
+
+class Topic(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+
+class Entry(models.Model):
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    text = models.TextField(blank=True, null=True)
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'entries'
+        ordering = ['-date']
+
+    def __str__(self):
+        return self.text[:100] + '...'
