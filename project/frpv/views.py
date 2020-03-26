@@ -64,6 +64,10 @@ def index(request):
     return render(request, 'frpv/index.html')
 
 
+def news(request):
+    return render(request, 'frpv/news.html')
+
+
 def application(request):
     context = {'labels': labels}
     return render(request, 'frpv/new_app.html', context)
