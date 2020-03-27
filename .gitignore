@@ -4,33 +4,24 @@ __pycache__/
 **/__pycache__/
 /__pycache__/**
 /**/__pycache__/
-<<<<<<< HEAD
-__pycache__/*
-=======
->>>>>>> 95eb0d1fed9ac85cbf333e2f6248cb11d64e7982
 .venv/
 .venv/**
 .venv
 
 .idea
 .idea/
-<<<<<<< HEAD
 *.cpython-38.pyc
-
-# db
-*.sqlite3
-**/*.sqlite3
-/**/*.sqlite3
-/*.sqlite3
-=======
-.idea/**
-.vscode/
-.vscode
-.vscode/**
 
 # db
 db.sqlite3
 **/db.sqlite3
 /**/db.sqlite3
 /db.sqlite3
->>>>>>> 95eb0d1fed9ac85cbf333e2f6248cb11d64e7982
+
+
+.idea/**
+.vscode/
+.vscode
+.vscode/**
+
+
