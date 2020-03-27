@@ -1,15 +1,15 @@
 # work enviorenment
 __pycache__
 __pycache__/
-/__pycache__/
-/__pycache__/*
+**/__pycache__/
+/__pycache__/**
 /*/__pycache__/
 __pycache__/*
+.venv/
+.venv/**
 .venv
-venv
-.env
-env
 .idea
+.idea/
 
 # db
 db.sqlite3
