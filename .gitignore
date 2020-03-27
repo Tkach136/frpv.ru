@@ -3,16 +3,17 @@ __pycache__
 __pycache__/
 **/__pycache__/
 /__pycache__/**
-/*/__pycache__/
+/**/__pycache__/
 __pycache__/*
 .venv/
 .venv/**
 .venv
 .idea
 .idea/
+*.cpython-38.pyc
 
 # db
-db.sqlite3
-*/db.sqlite3
-/*/db.sqlite3
-/db.sqlite3
+*.sqlite3
+**/*.sqlite3
+/**/*.sqlite3
+/*.sqlite3
