@@ -46,6 +46,7 @@ class Topic(models.Model):
 
 
 class Entry(models.Model):
+    header = models.CharField(max_length=50, blank=True, null=True)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     text = models.TextField(blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True)
@@ -56,3 +57,15 @@ class Entry(models.Model):
 
     def __str__(self):
         return self.text[:100] + '...'
+
+
+class Info(models.Model):
+    header = models.CharField(blank=True, null=True, max_length=100)
+    blockname = models.CharField(primary_key=True, max_length=50)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.blockname
+
+    class Meta:
+        verbose_name_plural = "Info's"

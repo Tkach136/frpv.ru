@@ -1,8 +1,9 @@
 1. Слить репу к себе
 $ git clone https://gitlab.com/egor_zenkin/frpv.git
-2. Создать виртуальное окружение в корневой папке frpv (которая создастся)
+2. Создать виртуальное окружение в корневой папке frpv и активировать его
 $ py -m venv .venv
-3. Установить зависимости
+$ .venv\Scripts\activate 
+3. Установить зависимости (библиотеки)
 pip install -r freeze.txt
 4. Инициализировать базу данных:
 $ py manage.py migrate
