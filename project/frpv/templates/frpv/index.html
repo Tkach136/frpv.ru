@@ -160,35 +160,29 @@ $(document).ready(function() { t446_setBg('38921750');
             </div>
         </div>
             <div class="t-container" style="padding-left: 0px;">
-
+                {% for entry in entries %}
                 <div class="t-col t-col_12 t-prefix_1 t-item"  style="padding-left:0px;">
                     <div class="t-cell t-valign_top" >
                         
                     <div class="t508__textwrapper t-cell t-valign_top" style="padding-left: 0px;">
                         <div class="t-name t-name_md t508__bottommargin" style="padding-left: 0px;" field="li_title__1476889049104">
-                            Правительство Воронежской области планирует заключить соглашение с АО «Концерн ВКО «Алмаз-Антей» 
+                            {{ entry.header }} 
                         </div>
-
+                        <div class="t-name t-name_md t508__bottommargin" style="font-size: 12px; color: gray;" field="li_title__1476889049104">
+                            <img src="{% static 'frpv/img/calendar.png' %} " width="10px">
+                        Дата: {{ entry.date }}, Тема: {{ entry.topic }}
+                    </div>
                         <div class="t-descr t-descr_sm" style="padding-left: 0px;" field="li_descr__1476889049104">
-                            28 мая состоялось совещание правительства Воронежской области с представителями АО «Концерн ВКО «Алмаз-Антей» и руководителями региональных промышленных предприятий.
-                            <br><br>
+                            {{ entry }} <a href="{% url 'frpv:news' entry.id %}">Подробнее</a>
+                            <br>
+                            
+                      <br>
                         </div>
                     </div>
                 </div>
 
                 <div class="t-clear t508__separator" style=""></div>
-                
-                    
-                    <div class="t508__textwrapper t-cell t-valign_top" style="padding-left: 0px;">
-                        <div class="t-name t-name_md t508__bottommargin" style="padding-left: 0px;" field="li_title__1476889075209">
-                            Вадим Дмитриев назначен директором РФРП</div>
-                        <div class="t-descr t-descr_sm" style="" field="li_descr__1476889075209">
-                            Директором Регионального фонда развития промышленности Воронежской области назначен Вадим Дмитриев, занимавший ранее должность заместителя руководителя департамента экономического развития.
-                            <br><br>
-
-                        </div>
-                        
-                    </div>
+                {% endfor %}
                     <div ><a style="float: right; font-size: 40px;" href="{% url 'frpv:archive' %}">Архив новостей</a></div>
 
                 <div class="t-clear t508__separator" style=""></div>
@@ -196,15 +190,8 @@ $(document).ready(function() { t446_setBg('38921750');
             </div>
         </div>
         
-        </div>
+        </div><!-- КОНЕЦ ОВОСТЕЙ -->
 
-<!-- КОНЕЦ ОВОСТЕЙ -->
-
-
-
-
-
-   
 
 
     <!-- 3 БЛОК -->

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404
 from django.http import Http404, HttpResponse, response, JsonResponse
 from django.views import generic
 from . models import Bid
@@ -7,7 +7,7 @@ from django.core import mail
 from django.conf import settings
 from django_db_logging import logging
 from django.utils import timezone
-import json
+from django.views import generic
 from .models import Entry, Topic, Info
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
@@ -60,6 +60,15 @@ rfrp@govvrn.ru
 """
 
 
+class IndexView(generic.ListView):
+    template_name = 'frpv/index.html'
+    context_object_name = 'entries'
+
+    def get_queryset(self):
+        """Возвращает последние 3 новости"""
+        return Entry.objects.order_by('-date')[:3]
+
+
 def index(request):
     return render(request, 'frpv/index.html')
 
@@ -69,11 +78,16 @@ def about(request):
     return render(request, 'frpv/about.html', {'about': data})
 
 
-def news(request, entry_id):
-    """представление конкретной новости"""
-    entry = Entry.objects.get(id=entry_id)
-    context = {'entry': entry}
-    return render(request, 'frpv/news.html', context=context)
+class EntryDetailView(generic.DetailView):
+    model = Entry
+    template_name = 'frpv/news.html'
+
+
+class ArchiveListView(generic.ListView):
+    template_name = 'frpv/arhiv.html'
+
+    def get_queryset(self):
+        return Entry.objects.all()
 
 
 def application(request):
@@ -94,6 +108,7 @@ def archive(request):
 
 
 def send(request):
+    """Отправка заполненной формы заявки"""
     if request.method != 'POST':
         return HttpResponse('Заполните недостающие поля.')
     elif request.POST == {}:

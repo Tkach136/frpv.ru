@@ -6,11 +6,11 @@ from . import views
 app_name = 'frpv'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.IndexView.as_view(), name='index'),
     path('send/', views.send, name='send'),
     path('application/', views.application, name='application'),
     path('navigator/', views.navigator, name='navigator'),
     path('archive/', views.archive, name='archive'),
-    path('news/<int:entry_id>/', views.news, name='news'),
+    path('news/<int:pk>/', views.EntryDetailView.as_view(), name='news'),
     path('about/', views.about, name='about'),
 ]
