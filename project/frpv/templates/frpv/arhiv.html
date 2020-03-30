@@ -40,14 +40,23 @@
     <div class="t-cell t-valign_top">                 
       <div class="t508__textwrapper t-cell t-valign_top" style="">
           <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889049104">
-              Дата: {{ entry.date}}, Тема: {{ entry.topic }} 
+              <div class="t-section__title t-title t-title_xxs t-align_left" style="padding:10px;" field="btitle">
+                        <a href="{% url 'frpv:news' entry.id %}">{{ entry.header }}</a>
+              </div>
+              <div class="t-name t-name_md t508__bottommargin" style="font-size: 12px; color: gray;" field="li_title__1476889049104">
+                  <img src="{% static 'frpv/img/calendar.png' %} " width="10px">
+              Дата: {{ entry.date }}, Тема: {{ entry.topic }}
+          </div>
+        <div class="t-name t-name_md t508_bottommargin" style="">
+            <a href="{{ entry.attachment.url }}">см. вложение</a>
+        </div>
           </div>
 
           <div class="t-descr t-descr_sm" style="" field="li_descr__1476889049104">
-          {{ entry.text }}
+          {{ entry }}
           </div>
       </div>
-  </div> 
+  </div>
 
   </td>
 </tr>

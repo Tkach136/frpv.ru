@@ -36,36 +36,50 @@ class Bid(models.Model):
 
     class Meta:
         ordering = ['name']
+        verbose_name_plural = 'Оставленные заявки'
+        verbose_name = 'Заявка'
 
 
 class Topic(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, verbose_name='Тема')
 
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Темы новостей'
+        verbose_name = 'Тема'
+
 
 class Entry(models.Model):
-    header = models.CharField(max_length=50, blank=True, null=True)
-    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    text = models.TextField(blank=True, null=True)
-    date = models.DateTimeField(auto_now_add=True)
+    """Модель одной новости"""
+    header = models.CharField(max_length=50, blank=True, null=True, verbose_name='Заголовок')
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, verbose_name='Тема')
+    text = models.TextField(blank=True, null=True, verbose_name='Текст')
+    date = models.DateTimeField(auto_now_add=True, verbose_name='Дата/время')
+    attachment = models.FileField(upload_to='pdf/', max_length=500, blank=True, verbose_name='Вложение')
+    image = models.ImageField(upload_to='img/', max_length=500, blank=True, verbose_name='Изображение')
 
     class Meta:
-        verbose_name_plural = 'entries'
+        verbose_name_plural = 'Новости'
+        verbose_name = 'Новость'
         ordering = ['-date']
 
     def __str__(self):
-        return self.text[:100] + '...'
+        return self.text[:200] + '...'
 
 
 class Info(models.Model):
-    header = models.CharField(blank=True, null=True, max_length=100)
-    blockname = models.CharField(primary_key=True, max_length=50)
-    text = models.TextField()
+    """Модель информации на сайте"""
+    header = models.CharField(blank=True, null=True, max_length=100, verbose_name='Заголовок')
+    blockname = models.CharField(primary_key=True, max_length=50, verbose_name='Имя блока')
+    text = models.TextField(verbose_name='Текст')
+    group = models.CharField(blank=True, null=True, max_length=100, verbose_name='Группа (см. контекст)')
+    attachment = models.FileField(upload_to='pdf/', max_length=500, blank=True, verbose_name='Вложение')
+    image = models.ImageField(upload_to='img/', max_length=500, blank=True, verbose_name='Изображение')
 
     def __str__(self):
         return self.blockname
 
     class Meta:
-        verbose_name_plural = "Info's"
+        verbose_name_plural = "Данные сайта"
