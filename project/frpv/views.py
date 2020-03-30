@@ -8,7 +8,7 @@ from django.conf import settings
 from django_db_logging import logging
 from django.utils import timezone
 import json
-from .models import Entry, Topic
+from .models import Entry, Topic, Info
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
           'price_project', 'implementation_period', 'sum_of_self_investments',
@@ -64,8 +64,16 @@ def index(request):
     return render(request, 'frpv/index.html')
 
 
-def news(request):
-    return render(request, 'frpv/news.html')
+def about(request):
+    data = Info.objects.get(blockname='about')
+    return render(request, 'frpv/about.html', {'about': data})
+
+
+def news(request, entry_id):
+    """представление конкретной новости"""
+    entry = Entry.objects.get(id=entry_id)
+    context = {'entry': entry}
+    return render(request, 'frpv/news.html', context=context)
 
 
 def application(request):
@@ -74,7 +82,10 @@ def application(request):
 
 
 def navigator(request):
-    return render(request, 'frpv/navig.html')
+    fed = Info.objects.filter(header='navigator', group='федеральный')
+    reg = Info.objects.filter(header='navigator', group='региональный')
+    context = {'fed': fed, 'reg': reg}
+    return render(request, 'frpv/navig.html', context=context)
 
 
 def archive(request):

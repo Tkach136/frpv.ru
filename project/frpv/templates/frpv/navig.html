@@ -38,24 +38,12 @@
                                             <table style="width:150px; height:100%;">
                                                 <tbody><tr><td>На главную</td></tr></tbody></table></a></div> </div> </div> </div> </div>
 
-
-                    <!-- <div class="t228__centerside t228__menualign_right">
-                        <div class="t228__centercontainer">
-                            <ul class="t228__list ">
-                                <li class="t228__list_item"><a class="t-menu__link-item" href="{% url 'frpv:index' %}"
-                                        style="color:#ffffff;font-weight:600;" data-menu-item-number="1">На главную</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
                 </div>
 
 
             </div>
 
 
-        </div>
-    </div>
 
     <script type="text/javascript">	$(document).ready(function () { t446_setLogoPadding('38921750'); }); var t446__doResize; $(window).resize(function () { t446_checkOverflow('38921750', '100'); clearTimeout(t446__doResize); t446__doResize = setTimeout(function () { t446_checkOverflow('38921750', '100'); }, 200); }); $(window).load(function () { t446_checkOverflow('38921750', '100'); }); $(document).ready(function () { t446_checkOverflow('38921750', '100'); }); $(document).ready(function () { t446_highlight(); });
         $(window).resize(function () {
@@ -73,41 +61,29 @@
 
 {% block main %}
 
-    <div id="rec38921751" class="r t-rec" style=" " data-animationappear="off" data-record-type="205">
-        <!-- cover -->
-        <div class="t-cover" id="recorddiv38921751" bgimgfield="img"
-            style="height:9vh; ">
-            <div class="t-cover__filter"
-                style="padding-top:1px; height:100vh;background-image: -moz-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: -o-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: -ms-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));background-image: linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.70));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#66000000&#39;, endColorstr=&#39;#4c000000&#39;);">
-            </div>
-            </div>
-    </div>
 
-
-
-
-    <!-- Основной блок -->
-    <div id="rec38921753" class="r t-rec r_anim r_showed" style=" " data-record-type="215">
-        <a name="service" style="font-size:0; height: 10px;" ></a>
-    </div>
     <div id="rec38921754" class="r t-rec t-rec_pt_150 t-rec_pb_180"
-        style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; " data-record-type="490"
+        style="padding-top:1px;padding-bottom:198px;background-color:#f7f7f7; " data-record-type="490"
         data-bg-color="#f5f5f5" data-animationappear="off">
         <!-- t490 -->
         <style>
-            table {
+            table .wrap{
              height: 900px;
              width: 900px; /* Ширина таблицы */
              border: 1px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
              margin: auto; /* Выравниваем таблицу по центру окна  */
             }
-                td {
-            width: 900px;
-             text-align: top: ;; /* Выравниваем текст по центру ячейки */
+            .wrap td{
+            width: 500px;
+            height: 300px;
+             text-align: top ; /* Выравниваем текст по центру ячейки */
             }
            </style>
-        <table>
-    
+        
+        
+        
+        
+        <table class='wrap t-align_center' >
         <caption>
             <div class="t-section__container t-container">
                 <div class="t-col t-col_12">
@@ -118,11 +94,15 @@
                 </div>
             </div>
         </caption>
-<!-- Контейнер откр1 -->
+
+
+
+        
+{% for row in fed %}
+
 
             <tr>
-                <td> <!-- Картинка -->
-
+                <td> <!-- img -->
                     <div class="t486__imgcontainer">
                         <div class="t486__row" style="height: 15px; padding: 20px;">
                             <div class="t486__imgwrapper" style=" padding: 90px;">
@@ -130,31 +110,28 @@
                                     data-original=""
                                     style="background-color: #f7f7f7; color: #000000;  height: 0px;"
                                     src="">
-                                    <img src="{% static 'frpv/img/минпромторг.jpg' %}  "
-                                        data-original="{% static 'frpv/img/минпромторг.jpg' %} class="
+                                    <img src="{{ row.image.url }}"
+                                        data-original="{{ row.image.url }}" class="
                                         t490__img t-img loaded" imgfield="li_img__1476968722790"
                                         style="width:300px">
                                </div>
                                 <div class="t493__textwrapper t-cell t-valign_middle">
                                 </div>
-                            </div>   
-                        </td>
+                            </div>
+                        </div>
+                    </div>   
+                </td>
                 
                 
-                        <td>  
-                <!-- Текст от первой картинки -->
-            
+                <td><!-- text -->  
                 <div class="t486__imgwrapper" style=" padding: 90px;">
                     <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
                         data-original=""
-                        style="background-color: #f7f7f7; color: #000000; height: 250px; "
+                        style="background-color: #f7f7f7; color: #000000; "
                         src="">
                         <div class="t-section__title t-title t-align_left"
-                            field="btitle" style="padding: 1px; font-size: 20px; width: 300px;" > <a href="{% static 'frpv/PDF/1.pdf' %}">
-                            Субсидии для предприятий промышленности по отраслям
-                            и направлениям деятельности.
-                            Субсидии УК промышленных (индустриальных) парков,
-                            участникам промышленных кластеров.</a>
+                            field="btitle" style="padding: 1px; font-size: 20px; width: 400px;" > 
+                            <a href="{{ row.attachment.url }}">{{ row.text }}</a>
                         </div>
                     </div>
                     <div class="t493__textwrapper t-cell t-valign_middle">
@@ -162,269 +139,17 @@
                 </div>    
                 </td>
             </tr>
-            
-            
-        </div><br>
-<!-- контейнер закр -->
+            <br>
+            <br>
+  {% endfor %}          
 
-<!-- Контейнер откр2 -->
-
-<tr>
-    <td> <!-- Картинка -->
-
-        <div class="t486__imgcontainer">
-            <div class="t486__row" style="height: 150px; padding: 20px;">
-                <div class="t486__imgwrapper" style=" padding: 120px;">
-                    <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-                        data-original=""
-                        style="background-color: #f7f7f7; color: #000000;  height: 0px;"
-                        src="">
-                        <img src="{% static 'frpv/img/минселхоз.jpg' %}  "
-                            data-original="{% static 'frpv/img/минселхоз.jpg' %} class="
-                            t490__img t-img loaded" imgfield="li_img__1476968722790"
-                            style="width:300px">
-                   </div>
-                    <div class="t493__textwrapper t-cell t-valign_middle">
-                    </div>
-                </div>   
-            </td>
-    
-    
-            <td>  
-    <!-- Текст от первой картинки -->
-
-    <div class="t486__imgwrapper" style=" padding: 50px;">
-        <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-            data-original=""
-            style="background-color: #f7f7f7; color: #000000; height: 150px; "
-            src="">
-            <div class="t-section__title t-title t-align_left"
-                field="btitle" style="padding: 10px; font-size: 20px; width: 300px;" ><a href="{% static 'frpv/PDF/2.pdf' %}">
-                Субсидии производителям сельхозтехники.</a>
-            </div>
-        </div>
-        <div class="t493__textwrapper t-cell t-valign_middle">
-        </div>
-    </div>    
-    </td>
-</tr>
-
-
-</div>
-<!-- контейнер закр -->
-
-
-
-<!-- Контейнер откр3 -->
-
-<tr>
-    <td> <!-- Картинка -->
-
-        <div class="t486__imgcontainer">
-            <div class="t486__row" style="height: 150px; padding: 20px;">
-                <div class="t486__imgwrapper" style=" padding: 150px;">
-                    <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-                        data-original=""
-                        style="background-color: #f7f7f7; color: #000000;  height: 0px;"
-                        src="">
-                        <img src="{% static 'frpv/img/фрп.jpg' %}  "
-                            data-original="{% static 'frpv/img/фрп.jpg' %} class="
-                            t490__img t-img loaded" imgfield="li_img__1476968722790"
-                            style="width:300px">
-                   </div>
-                    <div class="t493__textwrapper t-cell t-valign_middle">
-                    </div>
-                </div>   
-            </td>
-    
-    
-            <td>  
-    <!-- Текст от первой картинки -->
-
-    <div class="t486__imgwrapper" style=" padding: 120px;">
-        <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-            data-original=""
-            style="background-color: #f7f7f7; color: #000000; height: 250px; "
-            src="">
-            <div class="t-section__title t-title t-align_left"
-                field="btitle" style="padding: 10px; font-size: 20px; width: 300px;" >
-                <a href="{% static 'frpv/PDF/3.pdf' %}">
-                Целевые займы по программам: «Проекты развития», «Конверсия»,
-                «Цифровизация», «Производительность труда», «Комплектующие изделия»,
-                 «Лизинг», «Станкостроение», «Маркировка лекарств»</a>
-
-            </div>
-        </div>
-        <div class="t493__textwrapper t-cell t-valign_middle">
-        </div>
-    </div>    
-    </td>
-</tr>
-
-
-</div>
-<!-- контейнер закр -->
-            
-
-<!-- Контейнер откр4 -->
-
-<tr>
-    <td> <!-- Картинка -->
-
-        <div class="t486__imgcontainer">
-            <div class="t486__row" style="height: 150px; padding: 20px;">
-                <div class="t486__imgwrapper" style=" padding: 20px;">
-                    <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-                        data-original=""
-                        style="background-color: #f7f7f7; color: #000000;  height: 0px;"
-                        src="">
-                        <img src="{% static 'frpv/img/25.jpg' %}  "
-                            data-original="{% static 'frpv/img/25.jpg' %} class="
-                            t490__img t-img loaded" imgfield="li_img__1476968722790"
-                            style="width:300px">
-                   </div>
-                    <div class="t493__textwrapper t-cell t-valign_middle">
-                    </div>
-                </div>  
-            </div> 
-        </div>
-            </td>
-    
-    
-            <td>  
-    <!-- Текст от первой картинки -->
-
-    <div class="t486__imgwrapper" style=" padding: 120px;">
-        <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-            data-original=""
-            style="background-color: #f7f7f7; color: #000000; height: 250px; "
-            src="">
-            <div class="t-section__title t-title t-align_left"
-                field="btitle" style="padding: 10px; font-size: 20px; width: 300px;" > <a href="{% static 'frpv/PDF/4.pdf' %}">
-                Программы предоставления грантов
-                малым инновационным предприятиям
-                ФГБУ «Фонд содействия развитию
-                малых форм предприятий в научно-технической сфере»</a>
-               
-            </div>
-        </div>
-        <div class="t493__textwrapper t-cell t-valign_middle">
-        </div>
-    </div>    
-    </td>
-</tr>
-
-
-</div>
-<!-- контейнер закр -->
-            
-         
-<!-- Контейнер откр5 -->
-
-<tr>
-    <td> <!-- Картинка -->
-
-        <div class="t486__imgcontainer">
-            <div class="t486__row" style="height: 150px; padding: 20px;">
-                <div class="t486__imgwrapper" style=" padding: 20px;">
-                    <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-                        data-original=""
-                        style="background-color: #f7f7f7; color: #000000;  height: 0px;"
-                        src="">
-                        <img src="{% static 'frpv/img/КорпМСП.jpg' %}  "
-                            data-original="{% static 'frpv/img/КорпМСП.jpg' %} class="
-                            t490__img t-img loaded" imgfield="li_img__1476968722790"
-                            style="width:300px">
-                   </div>
-                    <div class="t493__textwrapper t-cell t-valign_middle">
-                    </div>
-                </div>   
-            </td>
-    
-    
-            <td>  
-    <!-- Текст от первой картинки -->
-
-    <div class="t486__imgwrapper" style=" padding: 20px;">
-        <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-            data-original=""
-            style="background-color: #f7f7f7; color: #000000; height: 250px; "
-            src="">
-            <div class="t-section__title t-title t-align_left" 
-                field="btitle" style="padding: 10px; font-size: 20px; width: 300px;" > <a href="{% static 'frpv/PDF/5.pdf' %}">
-                Программа предоставления кредитов на льготных условиях для субъектов МСП</a>               
-            </div>
-        </div>
-        <div class="t493__textwrapper t-cell t-valign_middle">
-        </div>
-    </div>    
-    </td>
-</tr>
-
-
-</div>
-<!-- контейнер закр -->
-
-
-
-<!-- Контейнер откр6 -->
-
-<tr>
-    <td> <!-- Картинка -->
-
-        <div class="t486__imgcontainer">
-            <div class="t486__row" style="height: 150px; padding: 20px;">
-                <div class="t486__imgwrapper" style=" padding: 120px;">
-                    <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-                        data-original=""
-                        style="background-color: #f7f7f7; color: #000000;  height: 0px;"
-                        src="">
-                        <img src="{% static 'frpv/img/сколково.jpg' %}  "
-                            data-original="{% static 'frpv/img/сколково.jpg' %} class="
-                            t490__img t-img loaded" imgfield="li_img__1476968722790"
-                            style="width:300px">
-                   </div>
-                    <div class="t493__textwrapper t-cell t-valign_middle">
-                    </div>
-                </div>   
-            </td>
-    
-    
-            <td>  
-    <!-- Текст от первой картинки -->
-
-    <div class="t486__imgwrapper" style=" padding: 120px;">
-        <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-            data-original=""
-            style="background-color: #f7f7f7; color: #000000; height: 250px; "
-            src="">
-            <div class="t-section__title t-title t-align_left"
-                field="btitle" style="padding: 10px; font-size: 20px; width: 300px;" > <a href="{% static 'frpv/PDF/6.pdf' %}">
-                Программы предоставления микрогрантов некоммерческой организацией «Фонд развития Центра разработки и коммерциализации новых технологий»</a>
-
-               
-            </div>
-        </div>
-        <div class="t493__textwrapper t-cell t-valign_middle">
-        </div>
-    </div>    
-    </td>
-</tr>
-
-
-</div>
-<!-- контейнер закр -->
-
-
-</div>
-</div>
 
 </table>
 
 
 
 <!-- Меры господдержки на региональном уровне -->
-<table style="background-color: #f7f7f7;" >
+<table class='wrap'>
     
     <caption>
         <div class="t-section__container t-container">
@@ -437,6 +162,7 @@
         </div>
     </caption>
 <!-- Контейнер откр1 -->
+{% for row in reg %}
 
         <tr>
             <td> <!-- Картинка -->
@@ -448,19 +174,21 @@
                                 data-original=""
                                 style="background-color: #f7f7f7; color: #000000;  height: 0px;"
                                 src="">
-                                <img src="{% static 'frpv/img/деппром.jpg' %}  "
-                                    data-original="{% static 'frpv/img/деппром.jpg' %} class="
+                                <img src="{{ row.image.url }}"
+                                    data-original={{ row.image.url }} class="
                                     t490__img t-img loaded" imgfield="li_img__1476968722790"
                                     style="width:300px">
                            </div>
                             <div class="t493__textwrapper t-cell t-valign_middle">
                             </div>
-                        </div>   
-                    </td>
+                        </div> 
+                    </div>  
+                </div>
+            </td>
+
+
+            <td>  <!-- Текст от  картинки -->
             
-            
-                    <td>  
-            <!-- Текст от первой картинки -->
         
             <div class="t486__imgwrapper" style=" padding: 10px;">
                 <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
@@ -468,10 +196,8 @@
                     style="background-color: #f7f7f7; color: #000000; height: 250px; "
                     src="">
                     <div class="t-section__title t-title t-align_left"
-                        field="btitle" style="padding: 1px; font-size: 20px; width: 300px;" ><a href="{% static 'frpv/PDF/7.pdf' %}">
-                        Поддержка предприятий промышленности (субсидии, специальные инвестиционные контракты, займы,
-                         содействие в получении мер поддержки федерального уровня).Поддержка промышленных технопарков.
-                         Поддержка промышленных кластеров.</a>
+                        field="btitle" style="padding: 1px; font-size: 20px; width: 300px;" >
+                        <a href="{{ row.attachment.url }}">{{ row.text }}</a>
 
                     </div>
                 </div>
@@ -480,69 +206,11 @@
             </div>    
             </td>
         </tr>
+
         
-        
-    </div><br>
+    <br>
 <!-- контейнер закр -->
-
-<!-- Контейнер откр2 -->
-
-<tr>
-<td> <!-- Картинка -->
-
-    <div class="t486__imgcontainer">
-        <div class="t486__row" style="height: 15px; padding: 20px;">
-            <div class="t486__imgwrapper" style=" padding: 20px;">
-                <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-                    data-original=""
-                    style="background-color: #f7f7f7; color: #000000;  height: 0px;"
-                    src="">
-                    <img src="{% static 'frpv/img/депэко.jpg' %}  "
-                        data-original="{% static 'frpv/img/депэко.jpg' %} class="
-                        t490__img t-img loaded" imgfield="li_img__1476968722790"
-                        style="width:300px">
-               </div>
-                <div class="t493__textwrapper t-cell t-valign_middle">
-                </div>
-            </div>   
-        </td>
-
-
-        <td>  
-<!-- Текст от первой картинки -->
-
-<div class="t486__imgwrapper" style=" padding: 100px;">
-    <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
-        data-original=""
-        style="background-color: #f7f7f7; color: #000000; height: 150px; "
-        src="">
-        <div class="t-section__title t-title t-align_left"
-            field="btitle" style="padding: 10px; font-size: 20px; width: 300px;" > <a href="{% static 'frpv/PDF/8.pdf' %}">
-            Поддержка особо значимых проектов, в том числе на территории
-             индустриальных (промышленных) парков
-             (субсидии, налоговые льготы)
-             Субсидии для малых инновационных предприятий
-             Поддержка предприятий МСП (субсидии, гарантии)</a>
-
-        </div>
-    </div>
-    <div class="t493__textwrapper t-cell t-valign_middle">
-    </div>
-</div>    
-</td>
-</tr>
-
-
-</div>
-<!-- контейнер закр -->
-
-
-
-
-
-
-</div>
-</div>
+{% endfor %}
 
 </table>
 </div>
