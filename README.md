@@ -1,4 +1,4 @@
-1. Слить репу к себе
+1. Слить репозиторий к себе
 $ git clone https://gitlab.com/egor_zenkin/frpv.git
 2. Создать виртуальное окружение в корневой папке frpv и активировать его
 $ py -m venv .venv
