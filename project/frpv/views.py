@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import Http404, HttpResponse, response, JsonResponse
 from django.views import generic
 from . models import Bid
@@ -100,6 +100,17 @@ def navigator(request):
     reg = Info.objects.filter(header='navigator', group='региональный')
     context = {'fed': fed, 'reg': reg}
     return render(request, 'frpv/navig.html', context=context)
+
+
+def navDetail(request, blockname):
+    # qs = get_list_or_404(Info, group=blockname)
+    qs = Info.objects.filter(group=blockname)
+    if blockname.isupper():
+        title = blockname
+    else:
+        title = blockname.capitalize()
+    context = {'rows': qs, 'title': title}
+    return render(request, 'frpv/nav_detail.html', context=context)
 
 
 def archive(request):
