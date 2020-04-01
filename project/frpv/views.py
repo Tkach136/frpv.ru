@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
-from django.http import Http404, HttpResponse, response, JsonResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views import generic
 from . models import Bid
 from django.core.mail import EmailMessage, send_mail
@@ -10,6 +10,8 @@ from django.utils import timezone
 from django.views import generic
 from .models import Entry, Topic, Info
 from .forms import BidForm
+import datetime
+from pprint import pformat
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
           'price_project', 'implementation_period', 'sum_of_self_investments',
@@ -46,14 +48,9 @@ ROWS = {
     'proposed_collateral': 'Предлагаемое обеспечение',
 }
 
-msg = """
-Заявка № %s успешно создана! 
-Наши менеджеры свяжутся с Вами в самое ближайшее время. 
-С уважением, Региональный фонд развития промышленности Воронежской области.
-"""
 by_user = """
-Заявка на финансирование %s (ИНН %s) успешно создана. 
-Номер заявки: %s 
+Заявка на финансирование компании %s (ИНН %s) успешно создана. 
+Дата заявки: %s 
 Наши менеджеры свяжутся с Вами в течение суток. 
 С уважением, Региональный фонд развития промышленности Воронежской области.
 +7 (473) 212-75-01
@@ -126,61 +123,33 @@ def application(request):
         form = BidForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse(msg)
+            topic = 'Заявка на финансирование компании %s , ИНН %s' % (form['name'].value(), form['INN'].value())
+            email_body = ''
+            for (key, value) in ROWS.items():
+                row = value + ' : ' + str(form['%s' % key].value()) + '\n'
+                email_body += row
+
+            # email на сервер
+            send_mail(
+                topic,
+                email_body,
+                settings.EMAIL_HOST_USER,
+                ['egrazor@yandex.ru']
+            )
+
+            # email пользователю
+            date = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+            msg_by_user = by_user % (form['name'].value(), form['INN'].value(), date)
+            send_mail(
+                topic,
+                msg_by_user,
+                settings.EMAIL_HOST_USER,
+                [form['email'].value()]
+            )
+            return HttpResponseRedirect('/application')
 
     context = {'form': form}
     return render(request, 'frpv/new_app.html', context)
-
-
-def send(request):
-    """Отправка заполненной формы заявки"""
-    if request.method != 'POST':
-        return HttpResponse('Заполните недостающие поля.')
-    elif request.POST == {}:
-        return HttpResponse('Вы ввели некорректные данные. Пожалуйта, попробуйте ещё раз.')
-    else:
-        data = request.POST
-        bid = Bid(
-            name=data.get('name'),
-            OGRN=data.get('OGRN'),
-            INN=data.get('INN'),
-            chief=data.get('chief'),
-            email=data.get('email'),
-            target=data.get('target'),
-            price_project=data.get('price_project'),
-            implementation_period=data.get('implementation_period'),
-            sum_of_self_investments=data.get('sum_of_self_investments'),
-            loan_amount=data.get('loan_amount'),
-            term_use_of_the_loan=data.get('term_use_of_the_loan'),
-            proposed_collateral=data.get('proposed_collateral')
-        )
-        bid.save()
-        now = timezone.now()
-        topic = 'Заявка на финансирование № %s компании %s , ИНН %s' % (bid.id, bid.name, bid.INN)
-        # TODO косяки со временем. Логи добавить
-        # logging('%s была создана' % now +
-        #         topic + 'на сумму %s' % bid.loan_amount)
-        email_body = ''
-        for (key, value) in ROWS.items():
-            row = value + ' : ' + data.get('%s' % key) + '\n'
-            email_body += row
-        # email на сервер
-        send_mail(
-            topic,
-            email_body,
-            settings.EMAIL_HOST_USER,
-            ['egrazor@yandex.ru']
-        )
-        # email пользователю
-        msg_by_user = by_user % (bid.name, bid.INN, bid.id)
-        send_mail(
-            topic,
-            msg_by_user,
-            settings.EMAIL_HOST_USER,
-            ['%s' % bid.email]
-        )
-        # TODO добавить отправку письма о создании заявки юзеру
-        return HttpResponse(msg % bid.id)
 
 
 
