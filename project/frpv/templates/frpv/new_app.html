@@ -2,16 +2,11 @@
 
 {% load static %}
 
-{% block title %}
-<title>АУ "РФРП ВО" | Заявка на финансирование</title>
-{% endblock title %}
 {% block content %}
 
-
-<div id="rec32538354" class="r t-rec t-rec_pt_150 t-rec_pb_120" 
+<div id="rec32538354" class="r t-rec t-rec_pt_150 t-rec_pb_120"
       style="padding-top:150px;padding-bottom:120px;background-color:#0a2f79; " data-record-type="255" data-bg-color="#346cdb">
 
-  <!-- T225 -->
   <div class="t225">
       <div class="t-container t-align_center">
           <div class="t-col t-col_10 t-prefix_1">
@@ -20,186 +15,47 @@
               <div class="t182__descr t-descr t-descr_lg t-animate t-animate_started" data-animate-style="fadeinup" data-animate-group="yes" style="transition-delay: 0.3s;" field="descr">
                   Все поля обязательны для заполнения. Наши менеджеры свяжутся с Вами в течение суток.
               </div>
-          </div> </div></div></div>
+          </div> </div>
+  </div>
+</div>
+  
+  <div id="rec32538356" class="r t-rec t-rec_pt_105 t-rec_pb_75" 
+  style="padding-top:105px;padding-bottom:75px; background-color: #f6f6f6;" data-animationappear="off" data-record-type="678" >
+<!-- t678 -->
+<div class="t678 ">
+    <div class="t-container">
 
-<div id="rec32538356" class="r t-rec t-rec_pt_105 t-rec_pb_75" 
-    style="padding-top:105px;padding-bottom:75px; background-color: #f6f6f6;" data-animationappear="off" data-record-type="678" >
-  <!-- t678 -->
-  <div class="t678 ">
-      <div class="t-container">
-          <div class="t-col t-col_8 t-prefix_2">
-              <div>
-                  <form action="{% url 'frpv:send' %}" method="post">
-                      {% csrf_token %}
-                      <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;"></div>
-                      <div class="t-form__inputsbox">
+  <div class="t-col t-col_8 t-prefix_2">
+    <div>
 
-                          <div class="t-input-group t-input-group_nm" data-input-lid="1494858943227">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1494858943227" style="">
-                                  Полное наименование организации</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="name" class="t-input js-tilda-rule " value=""  data-tilda-req="1"
-                                         data-tilda-rule="name" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
+<form action="{% url 'frpv:send' %}" method="post" role="form"
+                    class="t-form js-form-processes t-form_inputs-total_13" data-error-popup="y" data-success-popup="y">
+    {% csrf_token %}
 
-                          <div class="t-input-group t-input-group_em" data-input-lid="1493283059688">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1493283059688" style="">
-                                  ОГРН</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="OGRN" class="t-input js-tilda-rule " value="" data-tilda-req="1"
-                                         data-tilda-rule="" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
+    <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;"></div>
+    <div class="t-form__inputsbox">
+    {% for field in form %}
 
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  ИНН</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="INN" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Руководитель проекта: Ф.И.О., номер телефона</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="chief" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Адрес электронной почты</div>
-                              <div class="t-input-block">
-                                  <input type="email" name="email" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="email" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Цель и краткое описание проекта (Включая раздел вида экономической деятельности в рамках которой планируется проект для финансирования)</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="target" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Общая стоимость проекта</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="price_project" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Срок реализации проекта</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="implementation_period" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Сумма собственных вложений</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="sum_of_self_investments" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Сумма запрашиваемого займа</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="loan_amount" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text"  style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Срок пользования займа</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="term_use_of_the_loan" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text"  style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-
-                          <div class="t-input-group t-input-group_ph" data-input-lid="1495040492013">
-                              <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1495040492013" style="">
-                                  Предлагаемое обеспечение</div>
-                              <div class="t-input-block">
-                                  <input type="text" name="proposed_collateral" class="t-input js-tilda-rule " value=""
-                                         data-tilda-rule="text" style="color:#000000; border:1px solid #000000; ">
-                                  <div class="t-input-error"></div>
-                              </div>
-                          </div>
-                      </div>
-
-                          <div class="t-form__errorbox-middle">
-                              <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
-                                  <div class="t-form__errorbox-text t-text t-text_md">
-                                      <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
-                                      <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
-                                      <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
-                                      <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
-                                      <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
-                                      <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
-                                      <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
-                                  </div>
-                              </div>
-                          </div>
-
-                      <div class="t-form__submit">
-                          <button type="submit" class="t-submit" style="color:#ffffff;background-color:crimson;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" >
-                              ОТПРАВИТЬ</button>
-                      </div>
-
-                      <div class="t-form__errorbox-bottom">
-                          <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
-                              <div class="t-form__errorbox-text t-text t-text_md">
-                                  <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
-                                  <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
-                                  <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
-                                  <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
-                                  <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
-                                  <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
-                                  <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
-                              </div>
-                          </div>
-                      </div>
-
-                  </form>
-
-
-                  
-                  <style>#rec32538356 input::-webkit-input-placeholder {color:#000000; opacity: 0.5;}	#rec32538356 input::-moz-placeholder {color:#000000; opacity: 0.5;}	#rec32538356 input:-moz-placeholder {color:#000000; opacity: 0.5;}	#rec32538356 input:-ms-input-placeholder {color:#000000; opacity: 0.5;}	#rec32538356 textarea::-webkit-input-placeholder {color:#000000; opacity: 0.5;}	#rec32538356 textarea::-moz-placeholder {color:#000000; opacity: 0.5;}	#rec32538356 textarea:-moz-placeholder {color:#000000; opacity: 0.5;}	#rec32538356 textarea:-ms-input-placeholder {color:#000000; opacity: 0.5;}</style> </div> </div> </div> </div> <style>#rec32538356 .t-btn[data-btneffects-first],
-#rec32538356 .t-btn[data-btneffects-second],
-#rec32538356 .t-submit[data-btneffects-first],
-#rec32538356 .t-submit[data-btneffects-second] {	position: relative; overflow: hidden; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0);
-}</style><script type="text/javascript">$(document).ready(function() {
-});</script>
+        <div class="t-input-group t-input-group_nm" data-input-lid="1494858943227" style="padding:10px;">
+            <div class="t-input-title t-descr t-descr_md" data-redactor-toolbar="no" field="li_title__1494858943227" style="">
+                {{ field.label_tag }}</div>
+            {{ field.errors }}
+            <div class="t-input-block">
+                <input type="text" name="{{ field.name }}" class="t-input js-tilda-rule " value=""  data-tilda-req="1"
+                       data-tilda-rule="name" style="color:#000000; border:1px solid #000000; ">
+                <div class="t-input-error"></div>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="t-form__submit">
+        <button type="submit" class="t-submit" style="color:#ffffff;background-color:crimson;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" >ОТПРАВИТЬ</button>
+    </div>
+    </div>
+</form>
+</div>
 </div>
 </div>
 
+</div></div>
 
 {% endblock content %}

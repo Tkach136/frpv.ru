@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Bid(models.Model):
@@ -14,7 +15,6 @@ class Bid(models.Model):
     email = models.EmailField(
         verbose_name='email')
     target = models.TextField(
-        blank=True, null=True,
         verbose_name='цель и краткое описание')
     price_project = models.FloatField(
         verbose_name='стоимость проекта')
@@ -30,12 +30,16 @@ class Bid(models.Model):
     proposed_collateral = models.CharField(
         max_length=200,
         verbose_name='предлагаемое обеспечение')
+    date = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name='Дата и время оставления заявки',
+    )
 
     def __str__(self):
-        return "%s - ИНН %d : %d" % (self.name, self.INN, self.loan_amount)
+        return "( %s ) № %d от %s - ИНН %d" % (self.date, self.id, self.name, self.INN)
 
     class Meta:
-        ordering = ['name']
+        # ordering = ['-date']
         verbose_name_plural = 'Оставленные заявки'
         verbose_name = 'Заявка'
 
@@ -56,7 +60,8 @@ class Entry(models.Model):
     header = models.CharField(max_length=50, blank=True, null=True, verbose_name='Заголовок')
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE, verbose_name='Тема')
     text = models.TextField(blank=True, null=True, verbose_name='Текст')
-    date = models.DateTimeField(auto_now_add=True, verbose_name='Дата/время')
+    date = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления', editable=False)
+    changed = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
     attachment = models.FileField(upload_to='pdf/', max_length=500, blank=True, verbose_name='Вложение')
     image = models.ImageField(upload_to='img/', max_length=500, blank=True, verbose_name='Изображение')
 
@@ -79,7 +84,8 @@ class Info(models.Model):
     image = models.ImageField(upload_to='img/', max_length=500, blank=True, verbose_name='Изображение')
 
     def __str__(self):
-        return self.blockname
+        return "Группа %s , блок %s" % (self.group, self.blockname)
 
     class Meta:
         verbose_name_plural = "Данные сайта"
+        ordering = ['group']

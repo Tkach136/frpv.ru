@@ -9,6 +9,7 @@ from django_db_logging import logging
 from django.utils import timezone
 from django.views import generic
 from .models import Entry, Topic, Info
+from .forms import BidForm
 
 labels = ('name', 'OGRN', 'INN', 'chief', 'email', 'target',
           'price_project', 'implementation_period', 'sum_of_self_investments',
@@ -90,11 +91,6 @@ class ArchiveListView(generic.ListView):
         return Entry.objects.all()
 
 
-def application(request):
-    context = {'labels': labels}
-    return render(request, 'frpv/new_app.html', context)
-
-
 def navigator(request):
     fed = Info.objects.filter(header='navigator', group='федеральный')
     reg = Info.objects.filter(header='navigator', group='региональный')
@@ -103,12 +99,16 @@ def navigator(request):
 
 
 def navDetail(request, blockname):
+    # TODO добавить исключение при попытке доступа к несуществующей странице (раскомментить строку ниже)
     # qs = get_list_or_404(Info, group=blockname)
     qs = Info.objects.filter(group=blockname)
+
     if blockname.isupper():
         title = blockname
     else:
         title = blockname.capitalize()
+    if not qs:
+        title = 'Нет никаких данных по запросу "%s"' % title
     context = {'rows': qs, 'title': title}
     return render(request, 'frpv/nav_detail.html', context=context)
 
@@ -116,6 +116,20 @@ def navDetail(request, blockname):
 def archive(request):
     context = Entry.objects.all()
     return render(request, 'frpv/arhiv.html', {'entries': context})
+
+
+def application(request):
+    """определяет страницу заявки"""
+    if request.method != 'POST':
+        form = BidForm()
+    else:
+        form = BidForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponse(msg)
+
+    context = {'form': form}
+    return render(request, 'frpv/new_app.html', context)
 
 
 def send(request):
