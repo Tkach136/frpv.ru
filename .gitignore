@@ -22,10 +22,5 @@ __pycache__/
 **/.vscode
 **/.vscode/**
 
-# db
-db.sqlite3
-**/db.sqlite3
-/**/db.sqlite3
-/db.sqlite3
 
 
