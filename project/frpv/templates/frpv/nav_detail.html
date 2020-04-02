@@ -38,18 +38,22 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+</div>
+
         <table class='wrap t-align_center' >
 
 
 
-{% for row in data %}
+{% for row in rows %}
 
 
             <tr>
+                {% if row.image %}
                 <td> <!-- img -->
                     <div class="t486__imgcontainer">
                         <div class="t486__row" style="height: 15px; padding: 20px;">
+
                             <div class="t486__imgwrapper" style=" padding: 90px;">
                                 <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
                                     data-original=""
@@ -66,7 +70,7 @@
                         </div>
                     </div>
                 </td>
-
+                {% endif %}
 
                 <td><!-- text -->
                 <div class="t486__imgwrapper" style=" padding: 90px;">
@@ -76,11 +80,14 @@
                         src="">
                         <div class="t-section__title t-title t-align_left"
                             field="btitle" style="padding: 1px; font-size: 20px; width: 400px;" >
-                            <a href="{% url 'frpv:nav_detail' row.blockname %}">{{ row.text }}</a>
+                            {% if row.attachment %}
+                            <a href="{{ row.attachment.url }}">{{ row.text }}</a>
+                            {% else %}
+                            <div class="t493__textwrapper t-cell t-valign_middle">{{ row.text }}</div>
+                            {% endif %}
                         </div>
                     </div>
-                    <div class="t493__textwrapper t-cell t-valign_middle">
-                    </div>
+
                 </div>
                 </td>
             </tr>
