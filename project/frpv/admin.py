@@ -24,7 +24,8 @@ class InfoAdmin(admin.ModelAdmin):
         ('Вложения', {'fields': ['attachment', 'image']})
     ]
     list_display = ['blockname', 'group', 'header']
-    list_filter = ['group', 'header']
+    list_filter = ['group']
+    search_fields = ['header']
 
 
 admin.site.register(Bid, BidAdmin)
