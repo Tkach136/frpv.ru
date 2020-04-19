@@ -93,10 +93,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
-# archive settings
-ARCHIVE_DIRECTORY = os.path.join(os.environ['USERPROFILE'], 'backups')
-
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
