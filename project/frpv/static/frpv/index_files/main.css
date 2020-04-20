@@ -1,137 +1,41 @@
-/* * { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: #ffffff;
-}
-
-header a {
-  text-decoration: none;
-  outline: none;
-  display: block;
-  transition: .3s ease-in-out;
-}
-.logo {
-  color: #D5B45B;
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  padding: 20px 0;
-}
-nav {
-  display: table;
-  margin: 0 auto;
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.topmenu:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.topmenu > li {
-  width: 25%;
-  float: left;
-  position: relative;
-  font-family: 'Open Sans', sans-serif;
-}
-.topmenu > li > a {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-  color: #ffffff;
-  padding: 150px 300px;
-}
-.topmenu li a:hover { color: rgb(255, 255, 255); }
-
-.submenu {
-  background: #2180c9;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  z-index: 5;
-  width: 180px;
-  opacity: 0;
-  transform: scaleY(0);
-  transform-origin: 0 0;
-  transition: .5s ease-in-out;
-}
-.submenu a {
-  color: white;
-  text-align: left;
-  padding: 12px 15px;
-  font-size: 13px;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
-}
-.submenu li:last-child a { border-bottom: none; }
-.topmenu > li:hover .submenu {
-  opacity: 1;
-  transform: scaleY(1);
-}
-
-flex */
-
-
-
-
-
-a {
-  text-decoration: none;
-}
-
-nav {
-    font-family: monospace;
-}
-
-ul {
-  background: darkorange;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-li {
-    color: #fff;
-  background: darkorange;
-    display: block;
-    float: left;
-    padding: 1rem;
+.menu ul li{
+    padding: 10px;
+   
+  }
+  .menu ul > li:hover{
+    background-color: rgb(11, 124, 168);
+  }
+  .menu ul ul > li:hover{
+    background-color: #69e;
+  }
+  .menu ul li, .menu ul{
+    display: inline-block;
+  }
+  .menu ul{
     position: relative;
-    text-decoration: none;
-  transition-duration: 0.5s;
-}
-  
-li a {
-  color: #fff;
-}
-
-li:hover {
-    background: red;
-    cursor: pointer;
-}
-
-ul li ul {
-    background: orange;
-    visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  .menu ul ul{
+    display: none;
     position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-    left: 0;
-  display: none;
-}
-
-ul li:hover > ul,
-ul li:focus-within > ul, /* this is the line we add */
-ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
-ul li ul li {
-    clear: both;
-  width: 100%;
-}
+    background-color: #369;
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  .menu ul a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu ul ul a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu li:hover ul{
+    display: block;
+  }
+  
+  .menu li:hover li{
+    display: block;
+  }
