@@ -71,6 +71,22 @@ def index(request):
     return render(request, 'frpv/index.html')
 
 
+def struktura(request):
+    return render(request, 'frpv/struktura.html')
+
+
+def ruko(request):
+    return render(request, 'frpv/ruko.html')
+
+
+def sovet(request):
+    return render(request, 'frpv/sovet.html')
+
+
+def expsovet(request):
+    return render(request, 'frpv/expsovet.html')
+
+
 def about(request):
     data = Info.objects.get(blockname='about')
     return render(request, 'frpv/about.html', {'about': data})

@@ -18,7 +18,7 @@
             data-bgcolor-hex="#ffffff" data-bgcolor-rgba="rgba(255,255,255,0.0)" data-navmarker="nav38921874marker"
             data-appearoffset="" data-bgopacity-two="" data-menushadow="0" data-bgopacity="0.0"
             data-menu-items-align="right" data-menu="yes" data-bgcolor-setbyscript="yes">
-            <div class="t228__maincontainer t228__c12collumns" style="color: white;">
+            <div class="t228__maincontainer t228__c12collumns" >
                 <div class="t228__padding40px"></div>
                 <div style=" filter: invert(100%); padding-top: 10px ; padding-right: 10px;"> <a><img
                             src="{% static 'frpv/img/logo.png' %}"></a></div>
@@ -33,28 +33,41 @@
                     </div>
                 </div>
                 <div  class="t228__centerside t228__menualign_right " >
-                    <div style="color: white;" class=" ">
+                    <div  class=" ">
                         <ul class="t228__list" style="color: white; padding: 0; margin: 0;"></ul>
                             
                             <div style="color: rgb(255, 255, 255);">
                                 <link rel="stylesheet" href="{% static 'frpv/index_files/main.css' %}">
-                                <nav  class="menu">
-                                    <ul  >
-                                      <li><a style="color: white;" href="{% url 'frpv:about' %}">О Фонде</a></li>
-                                      <li><a style="color: white;" href="#">Услуги</a>
-                                      
-                                        <ul>
-                                          <li><a href="#">программа «Проекты развития»</a></li>
-                                          <li><a href="#">программа «Комплектующие изделия»</a></li>
-                                          <li><a href="#">Займы ФРП </a></li>
-                                          
-                                        </ul>
-                                      
-                                      </li>
-                                      <li><a style="color: white;" href="#">Релиз. проекты</a></li>
-                                      <li><a style="color: white;" href="#contacts">Контакты</a></li>
+
+                                <nav id="menu1">
+                                    <ul>
+                                        
+                                        <li><a style="color: white;" href="{% url 'frpv:about' %}">О фонде</a>
+                                            <ul>
+                                                <li><a href="{% url 'frpv:about' %}">О фонде</a></li>
+                                                <li><a href="{% url 'frpv:struktura' %}">Структура фонда</a></li>
+                                                <li><a href="{% url 'frpv:ruko' %}">Руководство</a></li>
+                                                <li><a href="{% url 'frpv:expsovet' %}">Экспертный совет</a></li>
+                                                <li><a href="{% url 'frpv:sovet' %}">Наблюдательный совет</a></li>
+                                                <li><a href="#m3_6">Документы фонда</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a style="color: white;" href="#m5">Услуги</a>
+                                            <ul>
+                                                <li><a href="#m5_1">программа «Проекты развития»</a></li>
+                                                <li><a href="#m5_2">программа «Комплектующие изделия»</a></li>
+                                                <li><a href="#m5_3">Займы ФРП</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a style="color: white;" href="#m4">Релиз. проекты</a></li>
+                                        <li><a style="color: white;" href="#contacts">Контакты</a></li>
+                                        
                                     </ul>
-                                  </nav>
+                                </nav>
+
+
+
+                               
                             </div>
 <!--                    <img src="url({% static 'frpv/img/logo.png' %})" style="float: left;">-->
 <!-- <li class="t228__list_item"><a class="t-menu__link-item" href="{% url 'frpv:about' %}"
