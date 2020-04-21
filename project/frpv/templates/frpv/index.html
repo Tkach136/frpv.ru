@@ -42,14 +42,14 @@
                                 <nav id="menu1">
                                     <ul>
                                         
-                                        <li><a style="color: white;" href="{% url 'frpv:about' %}">О фонде</a>
+                                        <li><a style="color: white;" href="#">О фонде</a>
                                             <ul>
                                                 <li><a href="{% url 'frpv:about' %}">О фонде</a></li>
                                                 <li><a href="{% url 'frpv:struktura' %}">Структура фонда</a></li>
                                                 <li><a href="{% url 'frpv:ruko' %}">Руководство</a></li>
                                                 <li><a href="{% url 'frpv:expsovet' %}">Экспертный совет</a></li>
                                                 <li><a href="{% url 'frpv:sovet' %}">Наблюдательный совет</a></li>
-                                                <li><a href="#m3_6">Документы фонда</a></li>
+                                                <li><a href="{% url 'frpv:doki' %}">Документы фонда</a></li>
                                             </ul>
                                         </li>
                                         <li><a style="color: white;" href="#m5">Услуги</a>
@@ -59,7 +59,7 @@
                                                 <li><a href="#m5_3">Займы ФРП</a></li>
                                             </ul>
                                         </li>
-                                        <li><a style="color: white;" href="#m4">Релиз. проекты</a></li>
+                                        <li><a style="color: white;" href="{% url 'frpv:reliz_proj' %}">Релиз. проекты</a></li>
                                         <li><a style="color: white;" href="#contacts">Контакты</a></li>
                                         
                                     </ul>

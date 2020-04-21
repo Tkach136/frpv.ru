@@ -15,4 +15,6 @@ urlpatterns = [
     path('ruko/', views.ruko, name='ruko'),
     path('sovet/', views.sovet, name='sovet'),
     path('expsovet/', views.expsovet, name='expsovet'),
+    path('doki/', views.doki, name='doki'),
+    path('reliz_proj/', views.reliz_proj, name='reliz_proj'),
 ]

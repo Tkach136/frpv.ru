@@ -87,6 +87,13 @@ def expsovet(request):
     return render(request, 'frpv/expsovet.html')
 
 
+def doki(request):
+    return render(request, 'frpv/doki.html')
+
+def reliz_proj(request):
+    return render(request, 'frpv/reliz_proj.html')
+
+
 def about(request):
     data = Info.objects.get(blockname='about')
     return render(request, 'frpv/about.html', {'about': data})
