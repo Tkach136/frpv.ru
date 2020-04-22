@@ -93,6 +93,15 @@ def doki(request):
 def reliz_proj(request):
     return render(request, 'frpv/reliz_proj.html')
 
+def proj_razv(request):
+    return render(request, 'frpv/proj_razv.html')
+
+def kompl_izd(request):
+    return render(request, 'frpv/kompl_izd.html')
+
+def zaim(request):
+    return render(request, 'frpv/zaim.html')
+
 
 def about(request):
     data = Info.objects.get(blockname='about')

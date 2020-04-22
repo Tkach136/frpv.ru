@@ -65,7 +65,7 @@
           box-sizing:border-box;
         }
         #menu1 ul li > a:hover, #menu1 ul li:hover > a{
-          background:rgb(25, 104, 150);
+          background:rgb(0, 0, 0);
           color:#2B45E0;
         }
         #menu1 ul li ul{
@@ -74,7 +74,7 @@
           left:0px;
           display:none;
           width:100%;
-          background:rgb(25, 104, 150);
+          background:rgb(255, 255, 255);
         }
         #menu1 > ul > li > ul::after{
           clear:both;
@@ -99,7 +99,7 @@
             }
             #menu1 ul li ul li:first-child > a{border-top:0px;}
             #menu1 ul li ul li a:hover, #menu1 ul li ul li:hover > a{
-              background:rgb(25, 104, 150);
+              background:rgb(0, 0, 0);
               color:rgb(255, 255, 255);
             }
           #menu1 ul li ul li ul{
