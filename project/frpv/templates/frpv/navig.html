@@ -72,8 +72,10 @@
              width: 900px; /* Ширина таблицы */
              border: 1px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
              margin: auto; /* Выравниваем таблицу по центру окна  */
+             
             }
             .wrap td{
+                
             width: 500px;
             height: 300px;
              text-align: top ; /* Выравниваем текст по центру ячейки */
@@ -83,7 +85,7 @@
         
         
         
-        <table class='wrap t-align_center' >
+        <table class='wrap t-align_center' style="margin: auto;" >
         <caption>
             <div class="t-section__container t-container">
                 <div class="t-col t-col_12">
@@ -149,7 +151,7 @@
 
 
 <!-- Меры господдержки на региональном уровне -->
-<table class='wrap'>
+<table class='wrap' style="margin: auto; ">
     
     <caption>
         <div class="t-section__container t-container">
@@ -164,7 +166,7 @@
 <!-- Контейнер откр1 -->
 {% for row in reg %}
 
-        <tr>
+        <tr style="box-shadow: inset 0px -1px 0px 0px #ffffff;border-bottom: 0px">
             <td> <!-- Картинка -->
 
                 <div class="t486__imgcontainer">

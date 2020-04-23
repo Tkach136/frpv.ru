@@ -99,8 +99,8 @@ def proj_razv(request):
 def kompl_izd(request):
     return render(request, 'frpv/kompl_izd.html')
 
-def zaim(request):
-    return render(request, 'frpv/zaim.html')
+def soglas(request):
+    return render(request, 'frpv/soglas.html')
 
 
 def about(request):

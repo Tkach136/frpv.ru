@@ -56,10 +56,10 @@
                                             <ul>
                                                 <li><a href="{% url 'frpv:proj_razv' %}">программа «Проекты развития»</a></li>
                                                 <li><a href="{% url 'frpv:kompl_izd' %}">программа «Комплектующие изделия»</a></li>
-                                                <li><a href="{% url 'frpv:zaim' %}">Займы ФРП</a></li>
+                                                <li><a href="{% url 'frpv:navigator' %}">Займы ФРП</a></li>
                                             </ul>
                                         </li>
-                                        <li><a style="color: white;" href="{% url 'frpv:reliz_proj' %}">Релиз. проекты</a></li>
+                                        <li><a style="color: white;" href="{% url 'frpv:reliz_proj' %}">Реализованные проекты</a></li>
                                         <li><a style="color: white;" href="#contacts">Контакты</a></li>
                                         
                                     </ul>
@@ -169,8 +169,9 @@
 
                                                     <div class="t-section__title t-title t-align_left" field="btitle"
                                                         style="padding: 20px; font-size: 20px;">
-                                                        <a class="t-menu__link-item" href="{% url 'frpv:navigator' %}"
-                                                            style="color:#000000;font-weight:600;">БИЗНЕС-НАВИГАТОР</a>
+                                                        <a class="t-menu__link-item" 
+                                                        
+                                                            style="color:#000000;font-weight:600;">Государственные меры поддержки федерального и регионального уровня</a>
                                                     </div>
                                                 </div>
                                                 <div class="t493__textwrapper t-cell t-valign_middle">
@@ -404,7 +405,7 @@
 
 <!-- Совместные программы -->
 <!-- t509 -->
-<div class="t509" style="padding-top: 50px;">
+<!-- <div class="t509" style="padding-top: 50px;">
     <div class="t-section__container t-container">
         <div class="t-col t-col_12">
             <div class="t-section__topwrapper t-align_center">
@@ -496,7 +497,7 @@
     </div>
 </div>
 
-</div>
+</div> -->
 
 <!-- /5 БЛОК-->
 
@@ -627,8 +628,8 @@
 
                 <div class="t551__title t-name t-name_xs t-align_center" style="color: #ffffff;" field="title"
                     data-animate-order="1">
-                    <a><img src="{% static 'frpv/img/logo.png' %}"
-                            style="filter: invert(100%); text-align-last: right;"><br></a>
+                    <a style="box-shadow: inset 0px -1px 0px 0px transparent; border-bottom: 0px"><img src="{% static 'frpv/img/logo.png' %}"
+                            style="box-shadow: inset 0px -1px 0px 0px transparent; filter: invert(100%); text-align-last: right;"><br></a>
                     Региональный фонд <br>развития промышленности<br> Воронежской области</div>
 
                 <div class="t551__contacts t-descr t-descr_s" style="color: #ffffff; font-size: 16px;" field="text"
@@ -723,10 +724,10 @@
         #allrecords .t-uptitle a {
             color: inherit;
             font-weight: inherit;
-            border-bottom: 2px solid #f5914f;
+            border-bottom: 0px solid #f5914f;
             -webkit-box-shadow: inset 0px -1px 0px 0px #f5914f;
             -moz-box-shadow: inset 0px -1px 0px 0px #f5914f;
-            box-shadow: inset 0px -1px 0px 0px #f5914f;
+            box-shadow: inset 0px -1px 0px 0px transparent;
         }
     </style>
 </div>

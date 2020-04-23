@@ -19,5 +19,5 @@ urlpatterns = [
     path('reliz_proj/', views.reliz_proj, name='reliz_proj'),
     path('proj_razv/', views.proj_razv, name='proj_razv'),
     path('kompl_izd/', views.kompl_izd, name='kompl_izd'),
-    path('zaim/', views.zaim, name='zaim'),
+    path('soglas/', views.soglas, name='soglas'),
 ]
