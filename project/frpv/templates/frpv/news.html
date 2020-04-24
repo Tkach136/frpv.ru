@@ -26,21 +26,21 @@
         <div class="t-section__container t-container">
             <div class="t-col t-col_12">
                 <div class="t-section__topwrapper t-align_center">
-                    <div class="t-section__title t-title t-title_xs" style="padding: 50px;" field="btitle">
+                    <div class="t-section__title t-title t-title_xs" style="padding: 50px; padding-bottom: 0;" field="btitle">
                         {{ entry.header }}</div>
                 </div>
             </div>
         </div>
     </caption>
-<div class="t486__imgwrapper" style=" padding: 90px;">
-    <img src="{{ entry.image.url }}" alt="{{ entry.header }}">
-                    <div class="t493__textwrapper t-cell t-valign_middle">
-                    </div>
-                </div>
-       
-<tr>
-  <td>
 
+       
+<tr style=" padding-bottom: 0;">
+  <td>
+    <!-- <div class="t486__imgwrapper" style=" padding: 30px; ">
+        <img style=" height: 300px;" src="{{ entry.image.url }}" alt="{{ entry.header }}">
+                        <div class="t493__textwrapper t-cell t-valign_middle">
+                        </div>
+                    </div> -->
     <div class="t-cell t-valign_top">                 
       <div class="t508__textwrapper t-cell t-valign_top" style="">
           <img src="{% static 'frpv/img/calendar.png' %} " width="10px">
@@ -51,7 +51,8 @@
               <a href="{{ entry.attachment.url }}">Вложение</a>
           </div>
           <div class="t-descr t-descr_sm" style="" field="li_descr__1476889049104">
-           {{ entry.text }}
+            <img style="margin: 4px 10px 2px 0px; height: 300px;"  src="{{ entry.image.url }}" align = "left";   alt="{{ entry.header }}">
+            {{ entry.text }}
           </div>
       </div>
   </div> 
@@ -61,7 +62,7 @@
 
 
 </table>
-
+<div><a style="color: rgb(0, 0, 0); float: right;padding-right: 500px; font-size: 40px;" href="{% url 'frpv:archive' %}">Назад</a></div>
 </div><!-- /rec -->
 
 {% endblock content %}
