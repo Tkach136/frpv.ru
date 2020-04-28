@@ -108,6 +108,10 @@ def about(request):
     return render(request, 'frpv/about.html', {'about': data})
 
 
+def video(request):
+    return render(request, 'frpv/video.html')
+
+
 class EntryDetailView(generic.DetailView):
     model = Entry
     template_name = 'frpv/news.html'

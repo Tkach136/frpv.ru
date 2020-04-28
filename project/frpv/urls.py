@@ -20,4 +20,5 @@ urlpatterns = [
     path('proj_razv/', views.proj_razv, name='proj_razv'),
     path('kompl_izd/', views.kompl_izd, name='kompl_izd'),
     path('soglas/', views.soglas, name='soglas'),
+    path('video/', views.video, name='video'),
 ]

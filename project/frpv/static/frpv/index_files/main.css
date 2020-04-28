@@ -52,11 +52,12 @@
         margin-top:4px;
       }
         #menu1 ul li a{
+          
           display:block;
           padding:9px 45px 0px 45px;
           font-size:14px;
           font-family:Arial, sans-serif;
-          color:#ffffef;
+          color:#ffffff;
           line-height:1.3em;
           text-decoration:none;
           font-weight:bold;
