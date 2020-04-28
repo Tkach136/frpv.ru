@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.contrib import messages
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.views import generic
 from . models import Bid
@@ -155,7 +156,7 @@ def application(request):
     """определяет страницу заявки"""
     if request.method != 'POST':
         form = BidForm()
-    else:
+    elif request.POST.get('checkbox') == 'yes':
         form = BidForm(request.POST)
         if form.is_valid():
             form.save()
@@ -182,7 +183,19 @@ def application(request):
                 settings.EMAIL_HOST_USER,
                 [form['email'].value()]
             )
-            return HttpResponseRedirect('/application')
+            msg = """
+            <h1>Заявка на финансирование успешно создана</h1>
+            <h3>Наши менеджеры свяжутся с Вами в течение суток</h3>
+            <p></p><h3>С уважением, Региональный фонд развития промышленности Воронежской области !</h3>
+            """
+            return HttpResponse(msg)
+            # return HttpResponseRedirect('/application')
+    else:
+        msg = """
+        Вы не подтвердили своё согласие на обработку персональных данных.
+        Вернитесь на предыдущую страницу и повторите попытку.
+        """
+        return HttpResponse(msg)
 
     context = {'form': form}
     return render(request, 'frpv/new_app.html', context)
