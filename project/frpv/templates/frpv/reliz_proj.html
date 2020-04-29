@@ -5,64 +5,65 @@
     <title>Реализованные проекты</title>
 {% endblock title %}
 {% block content %}
-<div id="rec38921754" class="r t-rec t-rec_pt_150 t-rec_pb_180"
-style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height: 600px;" data-record-type="490" data-bg-color="#f5f5f5" data-animationappear="off">
-<style>
-    table {
-     height: 900px;
-     width: 900px; /* Ширина таблицы */
-     border: 1px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
-     margin: auto; /* Выравниваем таблицу по центру окна  */
-    }
-        td {
-    width: 900px;
-     text-align: top: ;; /* Выравниваем текст по центру ячейки */
-    }
-   </style>
-<table>
 
-<caption>
+
+<div class="t509" style="padding-top: 50px;">
     <div class="t-section__container t-container">
         <div class="t-col t-col_12">
             <div class="t-section__topwrapper t-align_center">
-                <div class="t-section__title t-title t-title_xs" style="padding: 50px;" field="btitle">
-                    Реализованные проекты</div>
+                <div class="t-section__title t-title t-title_xs" field="btitle">Реализованные проекты</div>
             </div>
         </div>
     </div>
-</caption>
+    <div class="t-container">
+        <div class="t509__colwrapper t-col t-col_12 ">
+            
+            
+            
+            
+           
 
-    {% for entry in entries %}
-<tr>
-<td>
+            <div class="t509__col t-col t-col_6 t509__rightcol t509__desktopimg">
+                <div class="t509__imgwrapper" style="max-width:600px;">
+                    <div class="t509__blockimg t-bgimg loaded" bgimgfield="li_img__1481206097863"
+                        data-original=""
+                        style=" padding-top: 10%;"
+                        data-image-width="600" data-image-height="450" >
+                        <img src="{% static 'frpv/img/Borisoglebsk.jpg' %}">
+                    </div>
+                </div>
+            </div>
 
-<div class="t-cell t-valign_top">                 
-  <div class="t508__textwrapper t-cell t-valign_top" style="">
-      <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889049104">
-          <div class="t-section__title t-title t-title_xxs t-align_left" style="padding:10px;" field="btitle">
-                    <a href="{% url 'frpv:news' entry.id %}">{{ entry.header }}</a>
-          </div>
-          <div class="t-name t-name_md t508__bottommargin" style="font-size: 12px; color: gray;" field="li_title__1476889049104">
-              <img src="{% static 'frpv/img/calendar.png' %} " width="10px">
-          Дата: {{ entry.date }}, Тема: {{ entry.topic }}
-      </div>
-    <div class="t-name t-name_md t508_bottommargin" style="">
-        <a href="{{ entry.attachment.url }}">см. вложение</a>
+
+            <div class="t509__col t-col t-col_6 t509__leftcol">
+                <div class="t509__textwrapper t-align_left"
+                    style=" padding-left: 50px; max-width: 800px; height: 420px;">
+                    <div class="t509__content t-valign_middle">
+                        <div class="t509__box">
+                            <div class="t509__descr t-descr t-descr_sm t-margin_auto" field="li_descr__1481206097863"
+                                style="padding-bottom: 110px;">
+                                АО «Борисоглебский трикотаж» получило в 2019 году государственную поддержку в форме 
+                                льготного займа на создание производства чулочно-носочных изделий 
+                                с использованием технологии оплетенных эластомерных нитей.
+                                 Проект совместно профинансирован за счет средств федерального
+                                  (17,5 млн рублей) и регионального (7,5 млн) фондов развития промышленности. 
+                            </div><br> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </div>
-      </div>
-
-      <div class="t-descr t-descr_sm" style="" field="li_descr__1476889049104">
-      {{ entry }}
-      </div>
-  </div>
 </div>
 
-</td>
-</tr>
-{% endfor %}
+</div>
 
-</table>
 
-</div><!-- /rec -->
+
 {% endblock content %}
 
