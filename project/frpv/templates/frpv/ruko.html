@@ -9,15 +9,12 @@
 style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height: 600px;" data-record-type="490" data-bg-color="#f5f5f5" data-animationappear="off">
 <style>
     table {
-     height: 900px;
+     height: 300px;
      width: 900px; /* Ширина таблицы */
-     border: 1px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
+     border: 0px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
      margin: auto; /* Выравниваем таблицу по центру окна  */
     }
-        td {
-    width: 900px;
-     text-align: top: ;; /* Выравниваем текст по центру ячейки */
-    }
+       
    </style>
 <table>
 
@@ -25,41 +22,36 @@ style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height:
     <div class="t-section__container t-container">
         <div class="t-col t-col_12">
             <div class="t-section__topwrapper t-align_center">
-                <div class="t-section__title t-title t-title_xs" style="padding: 50px;" field="btitle">
+                <div class="t-section__title t-title t-title_xs" style="color: rgb(99, 134, 157); padding-top: 50px;padding-bottom: 10px; margin-right: 40px;" field="btitle">
                     Руководство</div>
             </div>
         </div>
     </div>
 </caption>
 
-    {% for entry in entries %}
+    
 <tr>
 <td>
-
-<div class="t-cell t-valign_top">                 
-  <div class="t508__textwrapper t-cell t-valign_top" style="">
-      <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889049104">
-          <div class="t-section__title t-title t-title_xxs t-align_left" style="padding:10px;" field="btitle">
-                    <a href="{% url 'frpv:news' entry.id %}">{{ entry.header }}</a>
-          </div>
-          <div class="t-name t-name_md t508__bottommargin" style="font-size: 12px; color: gray;" field="li_title__1476889049104">
-              <img src="{% static 'frpv/img/calendar.png' %} " width="10px">
-          Дата: {{ entry.date }}, Тема: {{ entry.topic }}
-      </div>
-    <div class="t-name t-name_md t508_bottommargin" style="">
-        <a href="{{ entry.attachment.url }}">см. вложение</a>
-    </div>
-      </div>
-
-      <div class="t-descr t-descr_sm" style="" field="li_descr__1476889049104">
-      {{ entry }}
-      </div>
-  </div>
-</div>
+    <p style="font-size: 20px; text-align: center;">Вадим Анатольевич Дмитриев. <br>
+        Должность: директор.</p><br>
+<p style="font-size: 20px;">
+    
+    Родился 8 июня 1973 года.<br>
+    Окончил Воронежский государственный университет, факультет прикладной математики, информатики и механики (1995 г.), экономический факультет (1996 г.).<br>
+    С 1997 года работал в различных подразделениях ЦЧБ СБ РФ. <br>
+    С 2006 по 2009 год – в должности регионального директора ККО в г. Воронеж КИТ Финанс Инвестиционный банк. <br>
+    
+    С 2009 по 2019 год занимал пост заместителя руководителя департамента экономического развития Воронежской области.
+    <br>
+    С 1 ноября 2019 года назначен на должность директора АУ «РФРП ВО».<br>
+    
+    Является действительным государственным советником Воронежской области 1 класса, имеет Благодарность губернатора Воронежской области и
+    Почетную грамоту правительства Воронежской области.<br>
+</p>
 
 </td>
 </tr>
-{% endfor %}
+
 
 </table>
 

@@ -9,14 +9,17 @@
 style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height: 600px;" data-record-type="490" data-bg-color="#f5f5f5" data-animationappear="off">
 <style>
     table {
-     height: 900px;
+     height: 150px;
      width: 900px; /* Ширина таблицы */
-     border: 1px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
+     border: 0px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
      margin: auto; /* Выравниваем таблицу по центру окна  */
     }
-        td {
-    width: 900px;
-     text-align: top: ;; /* Выравниваем текст по центру ячейки */
+    td {
+      width: 900px;
+            }   
+    tr {
+        padding: 10px;
+        margin: 10px;
     }
    </style>
 <table>
@@ -25,43 +28,184 @@ style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height:
     <div class="t-section__container t-container">
         <div class="t-col t-col_12">
             <div class="t-section__topwrapper t-align_center">
-                <div class="t-section__title t-title t-title_xs" style="padding: 50px;" field="btitle">
+                <div class="t-section__title t-title t-title_xs" style="color: rgb(99, 134, 157); padding-top: 50px;padding-bottom: 10px; margin-right: 40px;" field="btitle">
                     Экспертный совет</div>
             </div>
         </div>
     </div>
 </caption>
 
-    {% for entry in entries %}
+    
 <tr>
 <td>
-
-<div class="t-cell t-valign_top">                 
-  <div class="t508__textwrapper t-cell t-valign_top" style="">
-      <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889049104">
-          <div class="t-section__title t-title t-title_xxs t-align_left" style="padding:10px;" field="btitle">
-                    <a href="{% url 'frpv:news' entry.id %}">{{ entry.header }}</a>
-          </div>
-          <div class="t-name t-name_md t508__bottommargin" style="font-size: 12px; color: gray;" field="li_title__1476889049104">
-              <img src="{% static 'frpv/img/calendar.png' %} " width="10px">
-          Дата: {{ entry.date }}, Тема: {{ entry.topic }}
-      </div>
-    <div class="t-name t-name_md t508_bottommargin" style="">
-        <a href="{{ entry.attachment.url }}">см. вложение</a>
-    </div>
-      </div>
-
-      <div class="t-descr t-descr_sm" style="" field="li_descr__1476889049104">
-      {{ entry }}
-      </div>
-  </div>
-</div>
-
+    
+<p style="font-size: 20px;">
+    
+    Основной целью деятельности Экспертного совета является обеспечение эффективности использования 
+    средств Фонда,предназначенных для финансирования проектов. Положение и состав совета утверждены 
+    приказом АУ «Региональный фонд развития промышленности Воронежской области» №27 от 9 апреля 2019 г.
+</p>
 </td>
 </tr>
-{% endfor %}
+
 
 </table>
+<p style="font-size: 20px; text-align: center;">Состав Экспертного совета </p><br>
+
+    <table border="1" cellspacing="0" cellpadding="0" align="center" style="font-family:'lucida grande',tahoma,verdana,arial,sans-serif; width: 900px; height: 900px;">
+        
+        <tbody style="width: 600px;">
+        <tr>
+            <td>
+                <div align="">Верховцев 
+                    Артем Юрьевич 
+                     
+                    </div></td>
+        <td>
+        <div align="">•	заместитель председателя правительства Воронежской области  </div></td>
+        </tr>
+        
+        
+        <tr>
+        <td>
+        <div align="">Ганжа 
+            Антон Владимирович 
+             
+            </div></td>
+        <td>
+        <div align="">•	региональный менеджер государственной корпорации развития «ВЭБ.РФ» в Воронежской области </div></td>
+        </tr>
+
+
+        <tr>
+        <td>
+        <div align="">Ендовицкий  
+            Дмитрий Александрович
+             
+            </div></td>
+        <td>
+        <div align="">•	ректор ФГБОУ ВО «Воронежский государственный университет», председатель Совета ректоров высших учебных заведений Воронежской области, профессор, доктор экономических наук   </div></td>
+        </tr>
+        
+        
+        <tr>
+        <td>
+        <div align="">Журавлев 
+            Алексей Владимирович
+            
+            </div></td>
+        <td width="26%">
+        <div align="">• директор Ассоциации «Технологическая платформа «Технологии пищевой и перерабатывающей промышленности АПК – продукты здорового питания» </div></td>
+        </tr>
+
+
+        <tr>
+        
+        <td>
+        <div align="">Колодяжный  
+            Сергей Александрович 
+            
+            </div></td>
+        <td>
+        <div align="">• ректор ФГБОУ ВО «Воронежский государственный технический университет», доцент, кандидат технических наук </div></td>
+        </tr>
+          
+        <tr>
+        
+        <td>
+        <div align="">Кретов 
+            Юрий Дмитриевич 
+             
+            </div></td>
+        <td>
+        <div align="">•	руководитель Гарантийного фонда Воронежской области  </div></td>
+        </tr>
+
+
+        <tr>
+        
+        <td>
+        <div align="">Дмитриев 
+            Вадим Анатольевич 
+            
+            </div></td>
+        <td>
+        <div align="">•	директор АУ «Региональный фонд развития промышленности Воронежской области»   </div></td>
+        </tr>
+
+        
+          <tr>
+        
+        <td>
+        <div align="">Кустов 
+            Данил Александрович 
+             
+            </div></td>
+        <td>
+        <div align="">•	директор ОГБУ «Агентство по инвестициям и стратегическим проектам» </div></td>
+        </tr>
+        
+        <tr>
+        <td>
+            <div align=""> 
+                Лачугин Иван Георгиевич </div></td>
+            <td>
+            <div align="">•	президент ООО ФПК «Космос-Нефть-Газ» </div></td>
+            </tr>
+
+
+            <tr>
+                <td><div align="">Мерабишвили Мераби Отарович </div></td>
+                <td><div align="">•	генеральный директор ОАО «Завод по выпуску тяжелых механических прессов» </div></td>
+            </tr>
+
+            <tr>
+                <td><div align="">Остроушко 
+                    Дмитрий Юрьевич 
+                    </div></td>
+                <td><div align="">•	общественный представитель Агентства стратегических инициатив по направлению «Новый бизнес» </div></td>
+            </tr> 
+            
+            <tr>
+                <td><div align="">Потапов 
+                    Геннадий Николаевич 
+                    </div></td>
+                <td><div align="">•	генеральный директор ОАО «Электросигнал» </div></td>
+            </tr>
+            
+            <tr>
+                <td><div align="">Попов Василий Николаевич</div></td>
+                <td><div align="">• временно исполняющий обязанности ректора ФГБОУ ВО «Воронежский государственный университет инженерных технологий», профессор, доктор технических наук</div></td>
+            </tr> 
+            
+            <tr>
+                <td><div align="">Калашникова
+                    Светлана Владиславна 
+                    </div></td>
+                <td><div align="">•	заместитель директора – начальник отдела развития промышленных кластеров и проектной работы АУ  «Региональный фонд развития промышленности Воронежской области» </div></td>
+            </tr> 
+            
+            <tr>
+                <td><div align="">Фурсов 
+                    Дмитрий Николаевич 
+                    </div></td>
+                <td><div align="">•	региональный директор АО «Российский банк поддержки малого и среднего предпринимательства» в г. Воронеже </div></td>
+            </tr>
+            
+            <tr>
+                <td><div align="">Щипелев 
+                    Николай Семенович  
+                    </div></td>
+                <td><div align="">•	вице-президент Союза «Торгово-промышленная палата Воронежской области» </div></td>
+            </tr>
+
+
+            
+        </tbody>
+        </table>
+
+
+
 
 </div><!-- /rec -->
 {% endblock content %}

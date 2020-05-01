@@ -9,14 +9,17 @@
 style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height: 600px;" data-record-type="490" data-bg-color="#f5f5f5" data-animationappear="off">
 <style>
     table {
-     height: 900px;
+     height: 150px;
      width: 900px; /* Ширина таблицы */
-     border: 1px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
+     border: 0px solid rgb(0, 0, 0); /* Рамка вокруг таблицы */
      margin: auto; /* Выравниваем таблицу по центру окна  */
     }
-        td {
-    width: 900px;
-     text-align: top: ;; /* Выравниваем текст по центру ячейки */
+    td {
+      width: 200px;
+            }   
+    tr {
+        padding: 0px;
+        margin: 0px;
     }
    </style>
 <table>
@@ -25,43 +28,132 @@ style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height:
     <div class="t-section__container t-container">
         <div class="t-col t-col_12">
             <div class="t-section__topwrapper t-align_center">
-                <div class="t-section__title t-title t-title_xs" style="padding: 50px;" field="btitle">
+                <div class="t-section__title t-title t-title_xs" style="color: rgb(99, 134, 157); padding-top: 50px;padding-bottom: 10px; margin-right: 40px;" field="btitle">
                     Наблюдательный совет</div>
             </div>
         </div>
     </div>
 </caption>
 
-    {% for entry in entries %}
+    
 <tr>
 <td>
-
-<div class="t-cell t-valign_top">                 
-  <div class="t508__textwrapper t-cell t-valign_top" style="">
-      <div class="t-name t-name_md t508__bottommargin" style="" field="li_title__1476889049104">
-          <div class="t-section__title t-title t-title_xxs t-align_left" style="padding:10px;" field="btitle">
-                    <a href="{% url 'frpv:news' entry.id %}">{{ entry.header }}</a>
-          </div>
-          <div class="t-name t-name_md t508__bottommargin" style="font-size: 12px; color: gray;" field="li_title__1476889049104">
-              <img src="{% static 'frpv/img/calendar.png' %} " width="10px">
-          Дата: {{ entry.date }}, Тема: {{ entry.topic }}
-      </div>
-    <div class="t-name t-name_md t508_bottommargin" style="">
-        <a href="{{ entry.attachment.url }}">см. вложение</a>
-    </div>
-      </div>
-
-      <div class="t-descr t-descr_sm" style="" field="li_descr__1476889049104">
-      {{ entry }}
-      </div>
-  </div>
-</div>
-
+    
+<p style="font-size: 20px;">
+    
+    Наблюдательный совет является высшим органом управления учреждения. 
+    Положение и состав совета утвержден приказом департамента промышленности и 
+    транспорта Воронежской области №62-01-06/45 от 18.02.2019 г.
+</p>
 </td>
 </tr>
-{% endfor %}
+
 
 </table>
+<p style="font-size: 20px; text-align: center;">Состав Наблюдательного совета </p><br>
+
+    <table border="1" cellspacing="0" cellpadding="0" align="center" style="font-family:'lucida grande',tahoma,verdana,arial,sans-serif; width: 800px; height: 900px;">
+        
+        <tbody style="width: 200px;">
+        <tr>
+            <td>
+                <div align="">Десятириков  
+                    Александр Николаевич 
+                    </div></td>
+        <td>
+        <div align="">•	руководитель департамента промышленности и транспорта Воронежской области </div></td>
+        </tr>
+        
+        
+        <tr>
+        <td>
+        <div align="">Хлызов  
+            Сергей Олегович 
+            </div></td>
+        <td>
+        <div align="">•	начальник отдела развития обрабатывающих производств промышленности департамента промышленности и транспорта Воронежской области </div></td>
+        </tr>
+
+
+        <tr>
+        <td>
+        <div align="">Свиридова 
+            Наталья Юрьевна 
+            </div></td>
+        <td>
+        <div align="">•	ведущий консультант отдела по работе с юридическими лицами и учета государственного имущества департамента имущественных и земельных отношений Воронежской области </div></td>
+        </tr>
+        
+        
+        <tr>
+        <td>
+        <div align="">Верховцев 
+            Артем Юрьевич 
+            </div></td>
+        <td width="26%">
+        <div align="">•	член Совета по промышленной политике Воронежской области </div></td>
+        </tr>
+
+
+        <tr>
+        
+        <td>
+        <div align="">Чуйко 
+            Григорий Владимирович 
+            </div></td>
+        <td>
+        <div align="">•	председатель Комитета по промышленности, инновациям и вопросам импортозамещения Воронежской областной Думы  </div></td>
+        </tr>
+          
+        <tr>
+        
+        <td>
+        <div align="">Цуцаев
+            Олег Владимирович 
+            </div></td>
+        <td>
+        <div align="">•	управляющий Воронежским филиалом АО «АБ Россия» </div></td>
+        </tr>
+
+
+        <tr>
+        
+        <td>
+        <div align="">Алименко  
+            Игорь Анатольевич 
+            </div></td>
+        <td>
+        <div align="">•	генеральный директор ООО «Логус-агро» </div></td>
+        </tr>
+
+        
+          <tr>
+        
+        <td>
+        <div align="">Андреев 
+            Александр Борисович 
+            </div></td>
+        <td>
+        <div align="">•	президент Союза промышленников и предпринимателей Воронежской области (регионального объединения работодателей) </div></td>
+        </tr>
+        
+        <tr>
+        
+            <td>
+            <div align=""> 
+                Щипелев 
+Николай Семенович  
+ 
+                </div></td>
+            <td>
+            <div align="">•	вице-президент Союза «Торгово-промышленная палата Воронежской области» </div></td>
+            </tr>
+
+        </tbody>
+        </table>
+
+
+
 
 </div><!-- /rec -->
 {% endblock content %}
