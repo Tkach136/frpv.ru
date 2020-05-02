@@ -112,6 +112,9 @@ def about(request):
 def video(request):
     return render(request, 'frpv/video.html')
 
+def uslug(request):
+    return render(request, 'frpv/uslug.html')
+
 
 class EntryDetailView(generic.DetailView):
     model = Entry

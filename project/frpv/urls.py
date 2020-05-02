@@ -21,4 +21,5 @@ urlpatterns = [
     path('kompl_izd/', views.kompl_izd, name='kompl_izd'),
     path('soglas/', views.soglas, name='soglas'),
     path('video/', views.video, name='video'),
+    path('uslug/', views.uslug, name='uslug'),
 ]
