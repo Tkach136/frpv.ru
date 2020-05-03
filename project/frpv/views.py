@@ -89,7 +89,11 @@ def expsovet(request):
 
 
 def doki(request):
-    return render(request, 'frpv/doki.html')
+    data = Info.objects.filter(group='docs')
+    context = {
+        'data': data
+    }
+    return render(request, 'frpv/doki.html', context)
 
 def reliz_proj(request):
     return render(request, 'frpv/reliz_proj.html')

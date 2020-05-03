@@ -22,9 +22,9 @@ style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height:
         margin: 10px;
     }
    </style>
-<table>
 
-<caption>
+
+
     <div class="t-section__container t-container">
         <div class="t-col t-col_12">
             <div class="t-section__topwrapper t-align_center">
@@ -33,20 +33,27 @@ style="padding-top:1px;padding-bottom:98px;background-color:#f7f7f7; min-height:
             </div>
         </div>
     </div>
-</caption>
+
 
     
-<tr>
-<td>
-    
-<p style="font-size: 20px;"></p>
 
-<object><embed src="{% url 'frpv/img/Устав.pdf' %}" width="700" height="500" />gdsfgfdgdfga</object>
+    {% for doc in data %}
+    <div class="t486__imgwrapper" style=" padding: 90px;">
+        <div class="t486__blockimg t-bgimg loaded" bgimgfield="img"
+            data-original=""
+            style="background-color: #f7f7f7; color: #000000; "
+            src="">
+            <table>
+                <tr>
+                     <a  href="{{ doc.attachment.url }}">{{ doc.text }}</a>
+                    
+                </tr>
+            </table>
+            
+        </div>
 
-</td>
-</tr>
+    </div>
+    {% endfor %}
 
-
-</table>
 {% endblock content %}
 
