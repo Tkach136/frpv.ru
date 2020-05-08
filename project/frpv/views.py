@@ -96,6 +96,7 @@ def doki(request):
     return render(request, 'frpv/doki.html', context)
 
 def reliz_proj(request):
+    
     return render(request, 'frpv/reliz_proj.html')
 
 def proj_razv(request):
