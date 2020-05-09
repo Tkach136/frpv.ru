@@ -95,15 +95,19 @@ def doki(request):
     }
     return render(request, 'frpv/doki.html', context)
 
+
 def reliz_proj(request):
-    
-    return render(request, 'frpv/reliz_proj.html')
+    projects = Info.objects.filter(page='Реализованные проекты')
+    return render(request, 'frpv/reliz_proj.html', {'projects': projects})
+
 
 def proj_razv(request):
     return render(request, 'frpv/proj_razv.html')
 
+
 def kompl_izd(request):
     return render(request, 'frpv/kompl_izd.html')
+
 
 def soglas(request):
     return render(request, 'frpv/soglas.html')
@@ -116,6 +120,7 @@ def about(request):
 
 def video(request):
     return render(request, 'frpv/video.html')
+
 
 def uslug(request):
     return render(request, 'frpv/uslug.html')
@@ -134,21 +139,17 @@ class ArchiveListView(generic.ListView):
 
 
 def navigator(request):
-    fed = Info.objects.filter(header='navigator', group='федеральный')
-    reg = Info.objects.filter(header='navigator', group='региональный')
+    fed = Info.objects.filter(page='бизнес-навигатор', group='федеральный')
+    reg = Info.objects.filter(page='бизнес-навигатор', group='региональный')
     context = {'fed': fed, 'reg': reg}
     return render(request, 'frpv/navig.html', context=context)
 
 
-def navDetail(request, blockname):
+def navDetail(request, header):
     # TODO добавить исключение при попытке доступа к несуществующей странице (раскомментить строку ниже)
     # qs = get_list_or_404(Info, group=blockname)
-    qs = Info.objects.filter(group=blockname)
-
-    if blockname.isupper():
-        title = blockname
-    else:
-        title = blockname.capitalize()
+    qs = Info.objects.filter(page=header)
+    title = header
     if not qs:
         title = 'Нет никаких данных по запросу "%s"' % title
     context = {'rows': qs, 'title': title}

@@ -133,7 +133,7 @@
                         src="">
                         <div class="t-section__title t-title t-align_left"
                             field="btitle" style="text-align: center; padding: 1px; font-size: 20px; width: 400px;" > 
-                            <a href="{% url 'frpv:nav_detail' row.blockname %}">{{ row.text }}</a>
+                            <a href="{% url 'frpv:nav_detail' row.header %}">{{ row.text }}</a>
                         </div>
                     </div>
                     <div class="t493__textwrapper t-cell t-valign_middle">
@@ -199,7 +199,8 @@
                     src="">
                     <div class="t-section__title t-title t-align_left"
                         field="btitle" style="text-align: center; padding: 1px; font-size: 20px; width: 500px;" >
-                        <a href="{% url 'frpv:nav_detail' row.blockname %}">{{ row.text }}</a>
+                        <a href="{% url 'frpv:nav_detail' row.header %}">{{ row.text }}</a>
+
 
                     </div>
                 </div>

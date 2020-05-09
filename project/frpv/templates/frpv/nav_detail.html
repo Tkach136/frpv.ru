@@ -81,9 +81,9 @@
                         <div class="t-section__title t-title t-align_left"
                             field="btitle" style="text-align: center;  font-size: 20px; width: 700px;" >
                             {% if row.attachment %}
-                            <a  href="{{ row.attachment.url }}">{{ row.text }}</a>
+                            <a  href="{{ row.attachment.url }}">{{ row.text|truncatewords:20 }}</a>
                             {% else %}
-                            <div class="t493__textwrapper t-cell t-valign_middle">{{ row.text }}</div>
+                            <div class="t493__textwrapper t-cell t-valign_middle">{{ row.text|truncatewords:15 }}</div>
                             {% endif %}
                         </div>
                     </div>

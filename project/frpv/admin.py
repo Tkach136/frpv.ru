@@ -20,11 +20,11 @@ class BidAdmin(admin.ModelAdmin):
 
 class InfoAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Информация', {'fields': ['blockname', 'header', 'group', 'text']}),
+        ('Информация', {'fields': ['page', 'blockname', 'header', 'group', 'text', 'price']}),
         ('Вложения', {'fields': ['attachment', 'image']})
     ]
-    list_display = ['blockname', 'group', 'header']
-    list_filter = ['group']
+    list_display = ['header', 'page', 'blockname', 'group', ]
+    list_filter = ['page', 'group']
     search_fields = ['header']
 
 

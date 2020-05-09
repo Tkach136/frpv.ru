@@ -76,10 +76,14 @@ class Entry(models.Model):
 
 class Info(models.Model):
     """Модель информации на сайте"""
+    page = models.CharField(max_length=200, blank=True, null=True, verbose_name='Страница')
     header = models.CharField(blank=True, null=True, max_length=100, verbose_name='Заголовок')
     blockname = models.CharField(primary_key=True, max_length=50, verbose_name='Имя блока')
     text = models.TextField(verbose_name='Текст')
     group = models.CharField(blank=True, null=True, max_length=100, verbose_name='Группа (см. контекст)')
+    price = models.CharField(blank=True, null=True, max_length=20, 
+                             verbose_name='Сумма займа (млн. руб)',
+                             help_text='только для реализованных проектов')
     attachment = models.FileField(upload_to='pdf/', max_length=500, blank=True, verbose_name='Вложение')
     image = models.ImageField(upload_to='img/', max_length=500, blank=True, verbose_name='Изображение')
 
@@ -88,4 +92,4 @@ class Info(models.Model):
 
     class Meta:
         verbose_name_plural = "Данные сайта"
-        ordering = ['group']
+        ordering = ['page', 'header']
