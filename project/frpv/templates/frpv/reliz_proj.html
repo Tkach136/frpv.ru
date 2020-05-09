@@ -18,13 +18,13 @@
  </div>
 
 
- <style>
+ <!-- <style>
     #tab 
     table {
 
      height: 600px;   
-     width: 500px; /* Ширина таблицы */
-     margin: auto; /* Выравниваем таблицу по центру окна  */
+     width: 500px; 
+     margin: auto; 
      padding-bottom: 100px;
     }
     td {
@@ -32,15 +32,16 @@
     }
     
     
-    </style>
-<table class="tab" style="padding-bottom: 50px;" border="1" cellspacing="0" cellpadding="0" align="center">
-    <thead>
-<tr>
-    <td ><div align="center">название организации</div></td>
-    <td width="14%"><div align="center">наименование проекта</div></td>
-    <td><div align="center"> название программы</div></td>
-    <td><div align="center"> сумма займа, млн. руб.</div></td>
-    <td><div align="center"> Показатели эффективности за 5 лет реализации проекта</div></td>
+    </style> -->
+<div style="padding-bottom: 50px;">
+<table class="tab" style="border-collapse: collapse; " border="1" cellspacing="0" cellpadding="0" align="center">
+    <thead >
+<tr >
+    <td style="border: 1px solid grey;" ><div align="center">Название организации</div></td>
+    <td style="border: 1px solid grey;" width="14%"><div align="center">Наименование проекта</div></td>
+    <td style="border: 1px solid grey;"><div align="center"> Название программы</div></td>
+    <td style="border: 1px solid grey;"><div align="center"> сумма займа, млн. руб.</div></td>
+    <td style="border: 1px solid grey;"><div align="center"> Показатели эффективности за 5 лет реализации проекта</div></td>
 </tr>
  </thead>
     
@@ -50,27 +51,27 @@
     <tbody>
 
     {% for project in projects %}
-    <tr>
-        <td>
+    <tr >
+        <td style="border: 1px solid grey;">
             <div align="center"> 
                 <img src="{{ project.image.url }}">
                 <p >{{ project.blockname }}</p>
             </div>
         </td>
 
-        <td>
+        <td style="border: 1px solid grey;"> 
           <div align="center">{{ project.header }}</div>
         </td>
 
-        <td>
+        <td style="border: 1px solid grey;">
           <div align="center">{{ project.group }}</div>
         </td>
 
-        <td>
+        <td style="border: 1px solid grey;">
           <div align="center">{{ project.price }}</div>
         </td>
 
-        <td>
+        <td style="border: 1px solid grey;">
           <div>{{ project.text|escape|linebreaks }}</div>
         </td>
     </tr>
@@ -78,6 +79,6 @@
     
     </tbody>
     </table>
-
+</div>    
 {% endblock content %}
 
